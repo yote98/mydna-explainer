@@ -204,7 +204,7 @@ export async function translateReport(reportText: string): Promise<TranslateResp
     console.log(`[translate] Using pre-built response for ${prebuiltMatch.gene} (${prebuiltMatch.classification})`);
     try {
       return generatePrebuiltResponse(prebuiltMatch, reportText);
-    } catch (error) {
+    } catch {
       console.log('[translate] Pre-built response failed, falling back to LLM');
       // Fall through to LLM
     }
