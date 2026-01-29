@@ -106,7 +106,7 @@ export function VariantLookup({ onLookup }: VariantLookupProps) {
   return (
     <div className="space-y-6">
       {/* Search Input */}
-      <Card>
+      <Card className="shadow-sm">
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Search className="h-5 w-5" />
@@ -161,7 +161,7 @@ export function VariantLookup({ onLookup }: VariantLookupProps) {
           {result.found && result.variant ? (
             <>
               {/* Variant Details Card */}
-              <Card>
+              <Card className="shadow-sm">
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <div>
@@ -212,7 +212,7 @@ export function VariantLookup({ onLookup }: VariantLookupProps) {
               </Card>
 
               {/* Interpretation Guide */}
-              <Card>
+              <Card className="shadow-sm">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-lg">
                     <HelpCircle className="h-5 w-5" />
@@ -228,7 +228,7 @@ export function VariantLookup({ onLookup }: VariantLookupProps) {
             </>
           ) : (
             /* Not Found */
-            <Card>
+            <Card className="shadow-sm">
               <CardContent className="pt-6">
                 <div className="text-center space-y-2">
                   <Info className="h-12 w-12 text-muted-foreground mx-auto" />

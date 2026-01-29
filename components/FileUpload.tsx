@@ -4,7 +4,7 @@ import { useState, useRef, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Upload, FileText, Image, X, Loader2, AlertTriangle } from "lucide-react";
+import { Upload, FileText, Image as ImageIcon, X, Loader2, AlertTriangle, Shield } from "lucide-react";
 
 interface FileUploadProps {
   onTextExtracted: (text: string) => void;
@@ -24,7 +24,7 @@ export function FileUpload({ onTextExtracted, disabled = false }: FileUploadProp
   const [ocrProgress, setOcrProgress] = useState<OCRProgress | null>(null);
   const [processingType, setProcessingType] = useState<'pdf' | 'ocr' | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const ocrWorkerRef = useRef<any>(null);
+const ocrWorkerRef = useRef<any>(null); // eslint-disable-line @typescript-eslint/no-explicit-any
 
   const handleDragOver = useCallback((e: React.DragEvent) => {
     e.preventDefault();
@@ -65,7 +65,7 @@ export function FileUpload({ onTextExtracted, disabled = false }: FileUploadProp
       
       // Create worker
       const worker = await Tesseract.createWorker('eng', 1, {
-        logger: (m: any) => {
+        logger: (m: any) => { // eslint-disable-line @typescript-eslint/no-explicit-any
           if (m.status === 'recognizing text') {
             setOcrProgress({
               status: 'Recognizing text...',
@@ -96,14 +96,14 @@ export function FileUpload({ onTextExtracted, disabled = false }: FileUploadProp
       ocrWorkerRef.current = null;
 
       return text.trim();
-    } catch (err) {
+    } catch (e) {
       // Check if Tesseract is not installed
-      if (err instanceof Error && err.message.includes('Cannot find module')) {
+      if (e instanceof Error && e.message.includes('Cannot find module')) {
         throw new Error(
           'OCR support not available. Please install tesseract.js: npm install tesseract.js'
         );
       }
-      throw err;
+      throw e;
     }
   };
 
@@ -112,7 +112,7 @@ export function FileUpload({ onTextExtracted, disabled = false }: FileUploadProp
     if (ocrWorkerRef.current) {
       try {
         await ocrWorkerRef.current.terminate();
-      } catch (e) {
+      } catch {
         // Ignore termination errors
       }
       ocrWorkerRef.current = null;
@@ -175,8 +175,8 @@ export function FileUpload({ onTextExtracted, disabled = false }: FileUploadProp
 
       setError(`Unsupported file type: ${file.type || 'unknown'}. Please use PDF, image (PNG, JPG), or text files.`);
       
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Failed to process file');
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Failed to process file');
     } finally {
       setIsProcessing(false);
       setOcrProgress(null);
@@ -192,7 +192,7 @@ export function FileUpload({ onTextExtracted, disabled = false }: FileUploadProp
     if (file) {
       processFile(file);
     }
-  }, []);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -275,11 +275,11 @@ export function FileUpload({ onTextExtracted, disabled = false }: FileUploadProp
               <>
                 <div className="flex items-center gap-2">
                   {selectedFile.type === 'application/pdf' ? (
-                    <FileText className="h-8 w-8 text-red-500" />
+                    <FileText className="h-8 w-8 text-destructive/80" />
                   ) : selectedFile.type.startsWith('image/') ? (
-                    <Image className="h-8 w-8 text-blue-500" />
+                    <ImageIcon className="h-8 w-8 text-primary" />
                   ) : (
-                    <FileText className="h-8 w-8 text-gray-500" />
+                    <FileText className="h-8 w-8 text-muted-foreground" />
                   )}
                   <span className="font-medium">{selectedFile.name}</span>
                   <Button
@@ -321,7 +321,7 @@ export function FileUpload({ onTextExtracted, disabled = false }: FileUploadProp
       )}
 
       <Alert variant="warning" className="text-sm">
-        <AlertTriangle className="h-4 w-4" />
+        <Shield className="h-4 w-4" />
         <AlertDescription>
           <strong>Privacy reminder:</strong> After extraction, review the text and consider redacting your name, date of birth, or other identifiers before analysis. All processing is done locally or in-memory - we do not store your files.
         </AlertDescription>

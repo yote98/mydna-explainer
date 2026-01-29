@@ -321,7 +321,7 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
   const detectedPII = text.trim() ? handlePreviewPII() : [];
 
   return (
-    <Card className="w-full">
+    <Card className="w-full shadow-sm">
       <CardHeader>
         <CardTitle className="flex items-center gap-2">
           <FileText className="h-5 w-5" />
@@ -340,9 +340,9 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
             </AlertDescription>
             <button
               onClick={() => setShowWarning(false)}
-              className="absolute top-2 right-2 text-amber-600 hover:text-amber-800 dark:text-amber-400 text-sm"
+              className="absolute top-3 right-3 px-3 py-1 text-xs font-medium bg-amber-100 hover:bg-amber-200 text-amber-800 dark:bg-amber-900/30 dark:hover:bg-amber-900/50 dark:text-amber-300 rounded-full transition-colors"
             >
-              Got it
+              I Understand
             </button>
           </Alert>
         )}
@@ -377,7 +377,7 @@ Example content that can be analyzed:
               />
               <div className="flex justify-between items-center text-sm text-muted-foreground">
                 <span>{text.length.toLocaleString()} characters</span>
-                <span>Maximum: 100,000 characters</span>
+                <span>Maximum: 50,000 characters</span>
               </div>
             </div>
 

@@ -5,11 +5,11 @@ import { z } from 'zod';
 // ============================================================================
 
 // Translate API request
-// Note: We allow up to 100,000 chars but will intelligently truncate for the LLM
+// Note: keep this reasonably low for privacy + cost control.
 export const translateRequestSchema = z.object({
   text: z.string()
     .min(10, 'Report text must be at least 10 characters')
-    .max(100000, 'Report text must not exceed 100,000 characters'),
+    .max(50000, 'Report text must not exceed 50,000 characters'),
 });
 
 export type TranslateRequest = z.infer<typeof translateRequestSchema>;

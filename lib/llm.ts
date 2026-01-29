@@ -239,10 +239,10 @@ ${getDisclaimer()}`;
       // OpenAI and DeepSeek both use OpenAI-compatible API
       responseText = await callOpenAICompatible(enhancedPrompt, reportText);
     }
-  } catch (error) {
-    console.error('LLM API error:', error);
-    throw new Error('Failed to analyze report. Please try again.');
-  }
+    } catch (error) {
+      console.error('LLM API error:', error);
+      throw new Error('Failed to analyze report. Please try again.');
+    }
   
   // Parse and validate the response
   let parsed: unknown;

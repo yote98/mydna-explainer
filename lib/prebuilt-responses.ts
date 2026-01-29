@@ -157,6 +157,7 @@ export function findPrebuiltMatch(text: string): PrebuiltMatch | null {
  */
 export function generatePrebuiltResponse(
   match: PrebuiltMatch,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   originalText: string
 ): TranslateResponse {
   const data = loadPrebuiltData();
