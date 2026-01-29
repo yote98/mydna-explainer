@@ -1,0 +1,42 @@
+{
+  "general_questions": [
+    "What does this specific result mean for my health?",
+    "How reliable is this test result? Should it be confirmed with clinical testing?",
+    "What is my actual risk, considering my family history and other factors?",
+    "What screening or preventive measures, if any, do you recommend?",
+    "Should I see a genetic counselor for a more detailed discussion?",
+    "Are there any lifestyle changes that could reduce my risk?",
+    "How often should this result be re-evaluated as science advances?",
+    "Should any of my family members be tested?"
+  ],
+  "for_vus_results": [
+    "Is this VUS in a gene that's relevant to my family history?",
+    "What's the likelihood this will be reclassified in the future?",
+    "Should I enroll in a variant reclassification notification program?",
+    "Should I base any medical decisions on this VUS, or wait for more evidence?",
+    "Is there additional family testing that could help clarify this result?"
+  ],
+  "for_pathogenic_results": [
+    "What is the penetrance of this variant - what's my actual chance of developing symptoms?",
+    "At what age do symptoms typically appear, if they do?",
+    "What screening schedule do you recommend for early detection?",
+    "Are there preventive options I should consider?",
+    "What are the implications for my family members?",
+    "Should I be referred to a specialist for this condition?",
+    "Are there clinical trials or research studies I might be eligible for?"
+  ],
+  "for_carrier_status": [
+    "What does being a carrier mean for my health?",
+    "What are the implications if my partner is also a carrier?",
+    "Should my partner be tested before we have children?",
+    "What are my reproductive options if we're both carriers?",
+    "Can this carrier status affect my own health in any way?"
+  ],
+  "about_the_test": [
+    "What type of test was this (genotyping vs sequencing)?",
+    "What genes or variants were included in this test?",
+    "What are the limitations of this particular test?",
+    "Are there variants or genes NOT covered that I should know about?",
+    "Is the lab that performed this test accredited?"
+  ]
+}

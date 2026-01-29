@@ -1,0 +1,193 @@
+{
+  "terms": [
+    {
+      "term": "VUS",
+      "full_name": "Variant of Uncertain Significance",
+      "meaning": "A genetic change whose impact on health is currently unknown. It's not classified as harmful or harmless because there isn't enough scientific evidence yet.",
+      "why_it_matters": "VUS findings are common and do NOT mean you have a disease. Most VUS are eventually reclassified as benign (harmless).",
+      "common_misreadings": [
+        "Thinking VUS means 'probably harmful' - it doesn't",
+        "Assuming VUS requires immediate medical action",
+        "Believing VUS is a diagnosis"
+      ],
+      "what_to_do": "Do not make medical decisions based on a VUS alone. Discuss with a genetic counselor who can explain what follow-up, if any, is appropriate."
+    },
+    {
+      "term": "Pathogenic",
+      "full_name": "Pathogenic Variant",
+      "meaning": "A genetic change that is known to increase the risk of a particular health condition based on strong scientific evidence.",
+      "why_it_matters": "A pathogenic finding is significant but does NOT guarantee you will develop a condition. Risk depends on many factors including penetrance and your personal/family history.",
+      "common_misreadings": [
+        "Assuming pathogenic = 100% chance of disease",
+        "Thinking pathogenic means you currently have the disease",
+        "Ignoring that risk varies greatly between individuals"
+      ],
+      "what_to_do": "Discuss with a healthcare provider or genetic counselor to understand your personal risk and what screening or preventive options may be appropriate."
+    },
+    {
+      "term": "Likely Pathogenic",
+      "full_name": "Likely Pathogenic Variant",
+      "meaning": "A genetic change that probably increases disease risk (>90% certainty), but the evidence isn't quite as strong as for a fully 'pathogenic' classification.",
+      "why_it_matters": "Treated similarly to pathogenic variants clinically, but there's a small chance of reclassification as more evidence emerges.",
+      "common_misreadings": [
+        "Thinking 'likely' means uncertainty about having the disease",
+        "Dismissing it as unimportant because it's not fully pathogenic"
+      ],
+      "what_to_do": "Discuss with a genetic counselor. Clinical management is typically the same as for pathogenic variants."
+    },
+    {
+      "term": "Benign",
+      "full_name": "Benign Variant",
+      "meaning": "A genetic change that is NOT associated with increased disease risk. It's a normal variation found in the population.",
+      "why_it_matters": "Benign variants are harmless. Everyone has thousands of genetic variations, and most are benign.",
+      "common_misreadings": [
+        "Worrying about benign variants",
+        "Thinking any genetic 'variant' is bad"
+      ],
+      "what_to_do": "No action needed. Benign variants do not require medical follow-up."
+    },
+    {
+      "term": "Likely Benign",
+      "full_name": "Likely Benign Variant",
+      "meaning": "A genetic change that is probably harmless (>90% certainty), but the evidence isn't quite as strong as for a fully 'benign' classification.",
+      "why_it_matters": "Generally treated the same as benign variants - no clinical action needed.",
+      "common_misreadings": [
+        "Thinking 'likely' means there's significant concern"
+      ],
+      "what_to_do": "Typically no action needed. Discuss with your provider if you have questions."
+    },
+    {
+      "term": "Heterozygous",
+      "full_name": "Heterozygous",
+      "meaning": "Having one copy of a particular genetic variant (from one parent) and a different version from the other parent. You have two copies of most genes - one from each parent.",
+      "why_it_matters": "For many conditions, being heterozygous for a pathogenic variant means you're a 'carrier' - you may not be affected but could pass the variant to children.",
+      "common_misreadings": [
+        "Thinking heterozygous always means disease",
+        "Not understanding carrier status implications"
+      ],
+      "what_to_do": "The implications depend on the specific gene and variant. Discuss carrier status implications with a genetic counselor, especially if planning a family."
+    },
+    {
+      "term": "Homozygous",
+      "full_name": "Homozygous",
+      "meaning": "Having two identical copies of a particular genetic variant - one from each parent.",
+      "why_it_matters": "For recessive conditions, being homozygous for a pathogenic variant typically means the condition will manifest. For dominant conditions, it may increase severity.",
+      "common_misreadings": [
+        "Confusing with heterozygous",
+        "Not understanding recessive inheritance patterns"
+      ],
+      "what_to_do": "Discuss with a genetic counselor to understand the specific implications for the gene/condition involved."
+    },
+    {
+      "term": "Penetrance",
+      "full_name": "Penetrance",
+      "meaning": "The percentage of people with a particular genetic variant who actually develop the associated condition. High penetrance means most carriers develop symptoms; low penetrance means few do.",
+      "why_it_matters": "Even with a pathogenic variant, if penetrance is 40%, that means 60% of people with that variant never develop the condition. Penetrance explains why 'pathogenic' doesn't mean 'will definitely get sick'.",
+      "common_misreadings": [
+        "Ignoring penetrance when interpreting results",
+        "Assuming all pathogenic variants have 100% penetrance"
+      ],
+      "what_to_do": "Ask your genetic counselor about the penetrance of any significant variants found. This helps understand your actual risk."
+    },
+    {
+      "term": "Expressivity",
+      "full_name": "Variable Expressivity",
+      "meaning": "The range of signs and symptoms that can occur in different people with the same genetic variant. Some people may have mild symptoms while others have severe ones.",
+      "why_it_matters": "Even family members with the same variant can have very different experiences with a condition.",
+      "common_misreadings": [
+        "Expecting identical outcomes to family members with the same variant"
+      ],
+      "what_to_do": "Understand that genetic information provides probabilities, not certainties. Individual outcomes vary."
+    },
+    {
+      "term": "rsID",
+      "full_name": "Reference SNP ID",
+      "meaning": "A unique identifier (like 'rs1234567') assigned to a specific genetic variant in the dbSNP database. It's like a standardized name for a particular genetic location.",
+      "why_it_matters": "rsIDs help researchers and databases consistently refer to the same genetic variant. You can look up rsIDs in databases like ClinVar or dbSNP.",
+      "common_misreadings": [
+        "Thinking the 'rs' number indicates severity",
+        "Confusing rsID with disease risk level"
+      ],
+      "what_to_do": "Use rsIDs to look up more information about specific variants in scientific databases."
+    },
+    {
+      "term": "HGVS",
+      "full_name": "Human Genome Variation Society Nomenclature",
+      "meaning": "A standardized way to describe genetic variants using notation like 'NM_000123.4:c.123A>G'. It precisely specifies the location and nature of a genetic change.",
+      "why_it_matters": "HGVS notation is the scientific standard for describing variants precisely. Different labs and databases use this to ensure they're discussing the same variant.",
+      "common_misreadings": [
+        "Being confused by the technical notation",
+        "Thinking the complexity of the notation indicates importance"
+      ],
+      "what_to_do": "You don't need to understand HGVS notation in detail - genetic counselors can interpret it for you."
+    },
+    {
+      "term": "Polygenic",
+      "full_name": "Polygenic Trait/Risk",
+      "meaning": "A trait or disease risk influenced by many genes, each contributing a small effect. Most common conditions (heart disease, diabetes, height) are polygenic.",
+      "why_it_matters": "Polygenic risk scores combine effects of many variants but have significant limitations. They're population averages and may not apply well to your specific ancestry or individual situation.",
+      "common_misreadings": [
+        "Treating polygenic scores as precise predictions",
+        "Ignoring that lifestyle and environment also matter",
+        "Not understanding ancestry limitations of polygenic scores"
+      ],
+      "what_to_do": "Take polygenic risk scores as general information, not precise predictions. Lifestyle factors often matter as much or more."
+    },
+    {
+      "term": "Monogenic",
+      "full_name": "Monogenic Condition",
+      "meaning": "A condition caused primarily by variants in a single gene, such as cystic fibrosis or Huntington's disease.",
+      "why_it_matters": "Monogenic conditions have clearer inheritance patterns and genetic testing is often more definitive than for polygenic conditions.",
+      "common_misreadings": [
+        "Assuming all genetic conditions are monogenic",
+        "Not understanding that even monogenic conditions have variable expression"
+      ],
+      "what_to_do": "For monogenic conditions, genetic testing can be highly informative. Discuss results with a genetic counselor."
+    },
+    {
+      "term": "Ancestry Bias",
+      "full_name": "Population/Ancestry Bias in Genetic Data",
+      "meaning": "Most genetic research has been conducted on people of European ancestry, meaning databases and risk calculations may be less accurate for other populations.",
+      "why_it_matters": "If your ancestry is underrepresented in research, variant classifications and risk scores may be less reliable for you. A variant classified as 'VUS' might actually be a normal variation in your population that just hasn't been well-studied.",
+      "common_misreadings": [
+        "Assuming genetic databases apply equally to all populations",
+        "Not considering ancestry when interpreting results"
+      ],
+      "what_to_do": "Mention your ancestry background when discussing results. Ask how well-studied your population is for the variants found."
+    },
+    {
+      "term": "DTC",
+      "full_name": "Direct-to-Consumer Genetic Testing",
+      "meaning": "Genetic tests purchased directly by consumers without going through a healthcare provider, such as 23andMe or AncestryDNA.",
+      "why_it_matters": "DTC tests vary widely in quality and scope. Many use genotyping (checking specific spots) rather than sequencing (reading the full gene), which can miss variants. Results should often be confirmed with clinical-grade testing.",
+      "common_misreadings": [
+        "Treating DTC results as equivalent to clinical testing",
+        "Not understanding the limitations of genotyping vs sequencing",
+        "Making medical decisions based solely on DTC results"
+      ],
+      "what_to_do": "Consider DTC results as a starting point for conversation, not a definitive medical answer. Important findings should be confirmed with clinical testing."
+    },
+    {
+      "term": "Genetic Counselor",
+      "full_name": "Certified Genetic Counselor (CGC)",
+      "meaning": "A healthcare professional with specialized training in medical genetics and counseling. They help people understand genetic test results and their implications.",
+      "why_it_matters": "Genetic counselors are the experts at interpreting genetic tests in the context of your personal and family history. They can help you understand what results mean for you specifically.",
+      "common_misreadings": [
+        "Thinking any doctor can fully interpret genetic tests",
+        "Not knowing genetic counseling is available"
+      ],
+      "what_to_do": "Consider consulting a genetic counselor for complex results or family planning discussions. Many offer telehealth appointments."
+    },
+    {
+      "term": "Clinical Significance",
+      "full_name": "Clinical Significance Classification",
+      "meaning": "A rating given to genetic variants indicating their relationship to disease. The five-tier system is: Pathogenic, Likely Pathogenic, VUS, Likely Benign, and Benign.",
+      "why_it_matters": "Classifications can change over time as more evidence emerges. What's a VUS today might be reclassified as benign or pathogenic in the future.",
+      "common_misreadings": [
+        "Thinking classifications are permanent",
+        "Not understanding the uncertainty inherent in some classifications"
+      ],
+      "what_to_do": "Ask about the review status and evidence level for important findings. Consider periodic re-evaluation of VUS results."
+    }
+  ]
+}

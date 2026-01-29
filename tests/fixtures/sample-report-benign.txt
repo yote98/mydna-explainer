@@ -1,0 +1,64 @@
+GENETIC TEST REPORT - SAMPLE (FICTIONAL)
+==========================================
+Patient: [REDACTED]
+Test Date: 2024-03-10
+Lab: Example Genetics Laboratory
+
+RESULTS SUMMARY
+---------------
+
+NEGATIVE - No Pathogenic Variants Identified
+
+The following genes were analyzed for pathogenic variants:
+- BRCA1
+- BRCA2
+- TP53
+- PTEN
+- CDH1
+- STK11
+- PALB2
+
+Results:
+No pathogenic or likely pathogenic variants were identified in the genes listed above.
+
+Variants of Note (Benign/Likely Benign):
+
+Gene: BRCA1
+Variant: c.2612C>T (p.Pro871Leu)
+Classification: Benign
+Zygosity: Heterozygous
+rsID: rs799917
+
+This is a common benign polymorphism found in approximately 30% of the general population. It does not increase cancer risk.
+
+Gene: BRCA2
+Variant: c.865A>C (p.Asn289His)
+Classification: Benign
+Zygosity: Heterozygous
+rsID: rs766173
+
+This variant has been well-characterized as benign based on population studies and functional evidence.
+
+Gene: PALB2
+Variant: c.1010T>C (p.Leu337Ser)
+Classification: Likely Benign
+Zygosity: Heterozygous
+rsID: rs45532440
+
+Based on population frequency and available evidence, this variant is likely benign.
+
+Clinical Interpretation:
+This negative result means that no disease-causing variants were identified in the genes tested. However, this does NOT mean zero cancer risk:
+- Cancer can still occur due to non-genetic factors
+- Variants in genes not included in this panel could still be present
+- Some variants may not be detectable by current testing methods
+
+Recommendations:
+- Continue age-appropriate cancer screening
+- Update family history periodically
+- Consider re-testing if family history changes significantly
+- Standard screening guidelines still apply
+
+---
+NOTE: This is a SAMPLE/FICTIONAL report for testing purposes only.
+A negative genetic test does not eliminate cancer risk.

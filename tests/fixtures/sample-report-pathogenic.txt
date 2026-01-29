@@ -1,0 +1,50 @@
+GENETIC TEST REPORT - SAMPLE (FICTIONAL)
+==========================================
+Patient: [REDACTED]
+Test Date: 2024-02-20
+Lab: Example Genetics Laboratory
+
+RESULTS SUMMARY
+---------------
+
+POSITIVE FINDING IDENTIFIED
+
+Gene: MLH1
+Variant: c.1852_1854del (p.Lys618del)
+Classification: Pathogenic
+Zygosity: Heterozygous
+rsID: rs267607766
+ClinVar ID: VCV000089585
+
+Clinical Interpretation:
+A heterozygous pathogenic variant was identified in the MLH1 gene. This gene is associated with Lynch syndrome, also known as Hereditary Non-Polyposis Colorectal Cancer (HNPCC).
+
+Lynch syndrome is associated with increased risk for:
+- Colorectal cancer
+- Endometrial cancer
+- Ovarian cancer
+- Other cancers (stomach, urinary tract, brain, skin, etc.)
+
+This variant has been reported in multiple affected individuals and families. Functional studies and co-segregation data support a pathogenic classification.
+
+IMPORTANT: The presence of this variant indicates increased cancer risk but does NOT mean cancer will definitely develop. Risk varies by individual.
+
+Recommendations:
+- Genetic counseling is strongly recommended
+- Enhanced surveillance protocols should be discussed with healthcare providers
+- Family members may be at risk and should consider genetic counseling
+- Management guidelines from NCCN or other expert bodies should be reviewed
+
+Additional Findings:
+No other pathogenic or likely pathogenic variants were identified in the genes tested.
+
+Genes Tested (No Pathogenic Variants Found):
+- MSH2: No variants detected
+- MSH6: No variants detected
+- PMS2: No variants detected
+- EPCAM: No variants detected
+
+---
+NOTE: This is a SAMPLE/FICTIONAL report for testing purposes only.
+Real genetic reports contain different formatting and additional information.
+Penetrance for Lynch syndrome variants varies; not all carriers develop cancer.

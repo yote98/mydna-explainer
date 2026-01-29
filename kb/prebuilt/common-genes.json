@@ -1,0 +1,371 @@
+{
+  "genes": {
+    "BRCA1": {
+      "full_name": "Breast Cancer Gene 1",
+      "description": "BRCA1 is a tumor suppressor gene that helps repair damaged DNA. Pathogenic variants in BRCA1 significantly increase the risk of breast and ovarian cancer.",
+      "associated_conditions": [
+        "Hereditary Breast and Ovarian Cancer Syndrome (HBOC)",
+        "Breast cancer",
+        "Ovarian cancer",
+        "Prostate cancer (men)",
+        "Pancreatic cancer"
+      ],
+      "inheritance": "Autosomal dominant",
+      "penetrance": "Up to 72% lifetime risk for breast cancer; up to 44% for ovarian cancer",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic variant in BRCA1 has been identified. This is a significant finding that indicates an increased lifetime risk for certain cancers, particularly breast and ovarian cancer.",
+          "what_this_means": [
+            "You have an inherited genetic change that increases cancer risk",
+            "This does NOT mean you have cancer or will definitely develop cancer",
+            "Risk varies between individuals - not everyone with this variant develops cancer",
+            "Early detection and prevention strategies are available"
+          ],
+          "what_this_does_not_mean": [
+            "This is NOT a cancer diagnosis",
+            "This does NOT mean cancer is inevitable",
+            "This does NOT mean you need immediate surgery or treatment",
+            "This does NOT affect your current health status"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Meet with a certified genetic counselor to discuss your personal risk assessment",
+              "urgency": "important"
+            },
+            {
+              "title": "Enhanced Screening",
+              "description": "Discuss options like MRI screening, earlier mammograms, and CA-125 testing",
+              "urgency": "important"
+            },
+            {
+              "title": "Family Notification",
+              "description": "Consider informing blood relatives who may also carry this variant",
+              "urgency": "soon"
+            },
+            {
+              "title": "Risk-Reduction Discussion",
+              "description": "Learn about options including increased surveillance, medications, or preventive surgery",
+              "urgency": "routine"
+            }
+          ],
+          "questions_to_ask": [
+            "What is my specific lifetime risk for breast and ovarian cancer based on my family history?",
+            "What screening schedule do you recommend for me?",
+            "Should I consider risk-reducing medications like tamoxifen?",
+            "What are the pros and cons of risk-reducing surgery?",
+            "How should I share this information with my family members?",
+            "Are there clinical trials I might be eligible for?"
+          ]
+        },
+        "vus": {
+          "summary": "A Variant of Uncertain Significance (VUS) has been identified in BRCA1. This means we don't yet know if this specific genetic change affects cancer risk.",
+          "what_this_means": [
+            "A genetic change was found, but its significance is unknown",
+            "This is NOT the same as a pathogenic (harmful) variant",
+            "Most VUS are eventually reclassified as benign (harmless)",
+            "Your cancer risk assessment should be based on family history, not this VUS"
+          ],
+          "what_this_does_not_mean": [
+            "This is NOT a positive result for a cancer gene",
+            "This does NOT increase your known cancer risk",
+            "This should NOT change your medical management",
+            "This is NOT a reason for increased surveillance beyond family history recommendations"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "A genetic counselor can explain what VUS means for your specific situation",
+              "urgency": "routine"
+            },
+            {
+              "title": "Family History Assessment",
+              "description": "Your screening should be based on family history, not this VUS",
+              "urgency": "routine"
+            },
+            {
+              "title": "Periodic Re-evaluation",
+              "description": "Ask about variant reclassification programs that notify you if the classification changes",
+              "urgency": "informational"
+            }
+          ],
+          "questions_to_ask": [
+            "Should my medical care change based on this VUS?",
+            "How will I be notified if this variant is reclassified?",
+            "What does my family history suggest about my cancer risk?",
+            "Is there any research being done on this specific variant?"
+          ]
+        },
+        "benign": {
+          "summary": "A benign variant in BRCA1 has been identified. This is a normal genetic variation that does NOT increase cancer risk.",
+          "what_this_means": [
+            "This genetic change is harmless",
+            "It does not affect your cancer risk",
+            "No special action is needed based on this finding"
+          ],
+          "next_steps": [
+            {
+              "title": "Continue Standard Care",
+              "description": "Follow age-appropriate cancer screening guidelines",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "BRCA2": {
+      "full_name": "Breast Cancer Gene 2",
+      "description": "BRCA2 is a tumor suppressor gene involved in DNA repair. Pathogenic variants increase risk for breast, ovarian, prostate, and pancreatic cancers.",
+      "associated_conditions": [
+        "Hereditary Breast and Ovarian Cancer Syndrome (HBOC)",
+        "Breast cancer (female and male)",
+        "Ovarian cancer",
+        "Prostate cancer",
+        "Pancreatic cancer",
+        "Melanoma"
+      ],
+      "inheritance": "Autosomal dominant",
+      "penetrance": "Up to 69% lifetime risk for breast cancer; up to 17% for ovarian cancer",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic variant in BRCA2 has been identified. This indicates an increased lifetime risk for several cancers, including breast, ovarian, prostate, and pancreatic cancer.",
+          "what_this_means": [
+            "You have an inherited genetic change that increases cancer risk",
+            "BRCA2 risks are generally slightly lower than BRCA1 for ovarian cancer",
+            "Men with BRCA2 have increased prostate and breast cancer risk",
+            "Early detection and prevention strategies are available"
+          ],
+          "what_this_does_not_mean": [
+            "This is NOT a cancer diagnosis",
+            "This does NOT mean cancer is inevitable",
+            "This does NOT require immediate treatment decisions"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss your personal risk assessment with a genetic counselor",
+              "urgency": "important"
+            },
+            {
+              "title": "Enhanced Screening",
+              "description": "Discuss MRI screening, earlier mammograms, and other surveillance options",
+              "urgency": "important"
+            },
+            {
+              "title": "Family Notification",
+              "description": "Blood relatives may also carry this variant",
+              "urgency": "soon"
+            }
+          ],
+          "questions_to_ask": [
+            "What is my specific cancer risk based on this variant and my family history?",
+            "What screening schedule do you recommend?",
+            "What risk-reduction options should I consider?",
+            "How do I inform my family about this result?"
+          ]
+        },
+        "vus": {
+          "summary": "A Variant of Uncertain Significance (VUS) in BRCA2 means we cannot determine if this genetic change affects your health.",
+          "what_this_means": [
+            "The significance of this variant is currently unknown",
+            "Most VUS are eventually found to be benign",
+            "Medical decisions should not be based on this VUS alone"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss what this VUS means in your specific context",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "APOE": {
+      "full_name": "Apolipoprotein E",
+      "description": "APOE is involved in fat metabolism and brain health. The e4 variant is associated with increased Alzheimer's disease risk, while e2 may be protective.",
+      "associated_conditions": [
+        "Alzheimer's disease (increased risk with e4)",
+        "Cardiovascular disease",
+        "Age-related cognitive decline"
+      ],
+      "variants": {
+        "e2/e2": "May be protective against Alzheimer's; associated with type III hyperlipoproteinemia",
+        "e2/e3": "Slightly reduced Alzheimer's risk",
+        "e3/e3": "Most common genotype; average risk",
+        "e3/e4": "Moderately increased Alzheimer's risk (2-3x)",
+        "e4/e4": "Significantly increased Alzheimer's risk (8-12x)"
+      },
+      "important_context": "APOE e4 is a RISK FACTOR, not a deterministic gene. Many e4 carriers never develop Alzheimer's, and many Alzheimer's patients don't have e4.",
+      "responses": {
+        "e4_carrier": {
+          "summary": "You carry at least one copy of the APOE e4 variant, which is associated with increased Alzheimer's disease risk. However, this is NOT a diagnosis or prediction.",
+          "what_this_means": [
+            "APOE e4 is the most significant common genetic risk factor for late-onset Alzheimer's",
+            "Having e4 does NOT mean you will develop Alzheimer's",
+            "Many people with e4 never develop dementia",
+            "Lifestyle factors can significantly influence your actual risk"
+          ],
+          "what_this_does_not_mean": [
+            "This is NOT a diagnosis of Alzheimer's disease",
+            "This does NOT predict when or if you will develop dementia",
+            "This does NOT mean prevention is impossible",
+            "This is NOT a reason to make major life changes based solely on this result"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss what this means for you personally with a genetic counselor",
+              "urgency": "routine"
+            },
+            {
+              "title": "Brain-Healthy Lifestyle",
+              "description": "Exercise, diet, sleep, and cognitive engagement may reduce risk regardless of genetics",
+              "urgency": "routine"
+            },
+            {
+              "title": "Cardiovascular Health",
+              "description": "APOE e4 also affects heart health; managing cardiovascular risk factors is important",
+              "urgency": "routine"
+            }
+          ],
+          "questions_to_ask": [
+            "What is my actual lifetime risk considering my family history and lifestyle?",
+            "What lifestyle changes have the best evidence for reducing risk?",
+            "Should I participate in Alzheimer's prevention research?",
+            "How should I think about long-term planning?",
+            "What are my options if I notice memory changes in the future?"
+          ]
+        }
+      }
+    },
+    "MTHFR": {
+      "full_name": "Methylenetetrahydrofolate Reductase",
+      "description": "MTHFR is involved in processing folate (vitamin B9). Common variants (C677T, A1298C) are very frequent in the population and have been overhyped in wellness circles.",
+      "important_context": "MTHFR variants are EXTREMELY COMMON and NOT clinically significant for most people. Be cautious of sources that overstate their importance.",
+      "responses": {
+        "any_variant": {
+          "summary": "MTHFR variants (like C677T or A1298C) are very common in the general population. For most people, these variants have minimal or no clinical significance.",
+          "what_this_means": [
+            "MTHFR variants are found in 20-40% of the population",
+            "Most people with these variants have no health issues related to them",
+            "Standard dietary folate intake is usually sufficient",
+            "This finding is often over-interpreted in wellness/alternative medicine"
+          ],
+          "what_this_does_not_mean": [
+            "This does NOT mean you have a serious health condition",
+            "This does NOT require special supplements in most cases",
+            "This does NOT explain unexplained symptoms you may have",
+            "This is NOT the cause of fatigue, brain fog, or other common complaints"
+          ],
+          "caution": "Be wary of practitioners who recommend expensive supplements or treatments based solely on MTHFR status. The scientific evidence does not support most of these interventions.",
+          "next_steps": [
+            {
+              "title": "Standard Nutrition",
+              "description": "Eat a balanced diet with adequate folate from foods like leafy greens, legumes, and fortified grains",
+              "urgency": "routine"
+            },
+            {
+              "title": "Prenatal Planning",
+              "description": "If planning pregnancy, standard prenatal vitamins with folic acid are typically sufficient",
+              "urgency": "routine"
+            }
+          ],
+          "questions_to_ask": [
+            "Is there any reason I specifically need methylfolate supplements?",
+            "What does my homocysteine level show? (Only relevant blood test)",
+            "Should I be concerned about this finding?"
+          ]
+        }
+      }
+    },
+    "Factor V Leiden": {
+      "full_name": "Factor V Leiden Thrombophilia",
+      "gene": "F5",
+      "description": "Factor V Leiden is the most common inherited blood clotting disorder. It increases the risk of developing abnormal blood clots.",
+      "associated_conditions": [
+        "Deep vein thrombosis (DVT)",
+        "Pulmonary embolism",
+        "Pregnancy complications"
+      ],
+      "inheritance": "Autosomal dominant (but risk varies by copies)",
+      "responses": {
+        "heterozygous": {
+          "summary": "You carry one copy of the Factor V Leiden variant. This slightly increases your risk of blood clots, but most carriers never experience a clotting event.",
+          "what_this_means": [
+            "Your blood clot risk is about 3-8 times higher than average",
+            "Most people with one copy never have a blood clot",
+            "Risk increases with other factors like surgery, pregnancy, or birth control pills",
+            "This is one of the most common genetic variants - about 5% of Caucasians carry it"
+          ],
+          "next_steps": [
+            {
+              "title": "Inform Healthcare Providers",
+              "description": "Tell doctors and surgeons about this finding, especially before procedures",
+              "urgency": "important"
+            },
+            {
+              "title": "Discuss Contraception",
+              "description": "If applicable, discuss birth control options as estrogen-containing contraceptives increase clot risk",
+              "urgency": "soon"
+            },
+            {
+              "title": "Know Warning Signs",
+              "description": "Learn the symptoms of DVT (leg pain/swelling) and pulmonary embolism (chest pain, shortness of breath)",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "homozygous": {
+          "summary": "You carry two copies of the Factor V Leiden variant. This significantly increases your blood clot risk and warrants medical attention.",
+          "what_this_means": [
+            "Your blood clot risk is about 25-50 times higher than average",
+            "You should work with a hematologist for personalized guidance",
+            "Preventive measures are important, especially during high-risk situations"
+          ],
+          "next_steps": [
+            {
+              "title": "Hematology Consultation",
+              "description": "See a blood disorder specialist for personalized management",
+              "urgency": "important"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "common_classifications": {
+    "VUS": {
+      "standard_response": {
+        "summary": "A Variant of Uncertain Significance (VUS) means scientists haven't yet determined if this genetic change is harmful or harmless.",
+        "key_points": [
+          "VUS is NOT a positive result",
+          "VUS is NOT a diagnosis",
+          "Most VUS are eventually reclassified as benign (harmless)",
+          "Do NOT make medical decisions based on a VUS alone"
+        ],
+        "recommendation": "Discuss with a genetic counselor. Your medical care should be based on your personal and family history, not on this VUS finding."
+      }
+    },
+    "Likely Benign": {
+      "standard_response": {
+        "summary": "A Likely Benign classification means this variant is probably harmless, though there's a small chance the classification could change.",
+        "key_points": [
+          "Generally treated the same as benign (no action needed)",
+          "Greater than 90% certainty this is harmless",
+          "No clinical action typically recommended"
+        ]
+      }
+    },
+    "Benign": {
+      "standard_response": {
+        "summary": "A Benign classification means this variant is a normal genetic variation and does NOT cause disease.",
+        "key_points": [
+          "This is just normal human variation",
+          "No health implications",
+          "No action needed"
+        ]
+      }
+    }
+  }
+}

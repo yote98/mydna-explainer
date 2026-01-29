@@ -1,0 +1,110 @@
+{
+  "appointment_preparation": {
+    "title": "Preparing for Your Appointment",
+    "items": [
+      {
+        "task": "Bring a copy of your genetic test results",
+        "why": "Your provider needs to see the exact results, including variant IDs and classifications"
+      },
+      {
+        "task": "Prepare a family health history going back at least 3 generations",
+        "why": "Family history helps put genetic results in context and assess true risk"
+      },
+      {
+        "task": "List your current health conditions and medications",
+        "why": "Your overall health picture affects how results are interpreted"
+      },
+      {
+        "task": "Write down your questions in advance",
+        "why": "Appointments can be overwhelming - having written questions ensures you cover everything"
+      },
+      {
+        "task": "Consider bringing a family member or friend",
+        "why": "They can help take notes and provide emotional support"
+      },
+      {
+        "task": "Know the name of the testing company and test type",
+        "why": "Different tests have different limitations that affect interpretation"
+      }
+    ]
+  },
+  "family_history_worksheet": {
+    "title": "Family Health History Information to Gather",
+    "categories": [
+      {
+        "category": "For each family member, note:",
+        "items": [
+          "Relationship to you (mother, father, sibling, etc.)",
+          "Current age or age at death",
+          "Health conditions they have/had",
+          "Age when each condition was diagnosed",
+          "Cause of death if deceased",
+          "Ethnic background"
+        ]
+      },
+      {
+        "category": "Particularly important conditions to ask about:",
+        "items": [
+          "Cancer (type, age at diagnosis)",
+          "Heart disease (age at diagnosis or heart attack)",
+          "Diabetes (type, age at diagnosis)",
+          "Neurological conditions (Alzheimer's, Parkinson's, etc.)",
+          "Genetic conditions or birth defects",
+          "Multiple miscarriages or infant deaths",
+          "Early death (before age 50)"
+        ]
+      },
+      {
+        "category": "Family members to include:",
+        "items": [
+          "Parents",
+          "Siblings",
+          "Children",
+          "Grandparents (all 4 if possible)",
+          "Aunts and uncles",
+          "First cousins",
+          "Half-siblings if relevant"
+        ]
+      }
+    ]
+  },
+  "confirmatory_testing": {
+    "title": "Understanding Confirmatory Testing",
+    "when_needed": [
+      "DTC test showed a pathogenic or likely pathogenic variant",
+      "VUS result in a gene relevant to your family history",
+      "Making medical decisions based on genetic information",
+      "Results don't match expected family pattern"
+    ],
+    "what_to_expect": [
+      "Clinical test ordered through healthcare provider",
+      "May require blood draw (more accurate than saliva)",
+      "Results interpreted by medical geneticist or genetic counselor",
+      "Insurance may cover if medically indicated",
+      "Results become part of medical record"
+    ]
+  },
+  "finding_genetic_counselor": {
+    "title": "Finding a Genetic Counselor",
+    "resources": [
+      {
+        "name": "National Society of Genetic Counselors",
+        "url": "https://www.nsgc.org/findageneticcounselor",
+        "note": "Find a Board-Certified Genetic Counselor directory"
+      },
+      {
+        "name": "American College of Medical Genetics",
+        "url": "https://www.acmg.net/",
+        "note": "Find medical geneticists"
+      }
+    ],
+    "what_they_do": [
+      "Explain genetic test results in plain language",
+      "Help you understand personal and family risk",
+      "Discuss screening and prevention options",
+      "Coordinate care with other specialists",
+      "Support family communication about results",
+      "Many offer telehealth appointments"
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "description": "Sample variant identifiers for testing ClinVar lookups",
+  "note": "These are real rsIDs from ClinVar for testing. Results may change as ClinVar is updated.",
+  
+  "test_cases": [
+    {
+      "id": "rs1",
+      "type": "rsid",
+      "query": "rs80357906",
+      "description": "BRCA1 pathogenic variant (185delAG)",
+      "expected_significance": "Pathogenic",
+      "expected_gene": "BRCA1"
+    },
+    {
+      "id": "rs2",
+      "type": "rsid", 
+      "query": "rs28897696",
+      "description": "BRCA2 pathogenic variant",
+      "expected_significance": "Pathogenic",
+      "expected_gene": "BRCA2"
+    },
+    {
+      "id": "rs3",
+      "type": "rsid",
+      "query": "rs1799966",
+      "description": "BRCA1 benign variant (common polymorphism)",
+      "expected_significance": "Benign",
+      "expected_gene": "BRCA1"
+    },
+    {
+      "id": "rs4",
+      "type": "rsid",
+      "query": "rs17879961",
+      "description": "CHEK2 I157T - likely benign or VUS depending on review",
+      "expected_gene": "CHEK2"
+    },
+    {
+      "id": "rs5",
+      "type": "rsid",
+      "query": "rs121918506",
+      "description": "MLH1 pathogenic variant (Lynch syndrome)",
+      "expected_significance": "Pathogenic",
+      "expected_gene": "MLH1"
+    },
+    {
+      "id": "vcv1",
+      "type": "variation_id",
+      "query": "VCV000017661",
+      "description": "ClinVar Variation ID format test",
+      "expected_gene": "BRCA1"
+    },
+    {
+      "id": "vcv2",
+      "type": "variation_id",
+      "query": "17661",
+      "description": "Numeric variation ID (without VCV prefix)",
+      "expected_gene": "BRCA1"
+    },
+    {
+      "id": "invalid1",
+      "type": "invalid",
+      "query": "notarealvariant12345",
+      "description": "Invalid/nonexistent variant",
+      "expected_found": false
+    },
+    {
+      "id": "gene1",
+      "type": "gene",
+      "query": "BRCA1",
+      "description": "Gene name search (will return first result)",
+      "note": "Gene searches return multiple results; we show first match"
+    }
+  ],
+
+  "format_examples": {
+    "rsid": ["rs80357906", "rs1234567", "rs999999999"],
+    "variation_id": ["VCV000017661", "VCV000089585", "17661", "89585"],
+    "hgvs": [
+      "NM_007294.4:c.68_69del",
+      "NM_000059.4:c.1234A>G",
+      "NC_000017.11:g.43071077T>C"
+    ],
+    "gene": ["BRCA1", "BRCA2", "TP53", "MLH1"]
+  }
+}
