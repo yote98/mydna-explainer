@@ -15,6 +15,8 @@ const alertVariants = cva(
           'text-amber-900 bg-amber-50 border-amber-200 [&>svg]:text-amber-600 dark:bg-amber-950 dark:text-amber-200 dark:border-amber-800 dark:[&>svg]:text-amber-400',
         info:
           'text-blue-900 bg-blue-50 border-blue-200 [&>svg]:text-blue-600 dark:bg-blue-950 dark:text-blue-200 dark:border-blue-800 dark:[&>svg]:text-blue-400',
+        scientific:
+          'text-primary bg-primary/5 border-primary/20 [&>svg]:text-primary shadow-[0_4px_12px_rgba(79,70,229,0.05)] backdrop-blur-sm',
       },
     },
     defaultVariants: {

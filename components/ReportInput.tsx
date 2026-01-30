@@ -28,35 +28,35 @@ const GENETICS_KEYWORDS = [
   /\b(pathogenic|benign|likely\s*pathogenic|likely\s*benign|uncertain\s*significance|vus)\b/i,
   /\b(heterozygous|homozygous|hemizygous|zygosity)\b/i,
   /\b(snp|snps|polymorphism|polymorphisms)\b/i,
-  
+
   // Gene names (common patterns)
   /\b(BRCA1|BRCA2|APOE|MTHFR|CHEK2|ATM|PALB2|TP53|MLH1|MSH2|MSH6|PMS2)\b/i,
   /\b(LDLR|PCSK9|APOB|CFTR|HBB|FMR1|DMD|SMN1|GBA|HEXA)\b/i,
   /\b(CYP2D6|CYP2C19|CYP2C9|CYP3A4|VKORC1|SLCO1B1|DPYD|TPMT|UGT1A1)\b/i,
   /\b[A-Z][A-Z0-9]{2,}[0-9]?\b/, // General gene pattern (e.g., HNF1A, GCKR)
-  
+
   // rsIDs and HGVS
   /\brs\d+\b/i,
   /\b(NM_|NC_|NP_|NG_)\d+/i,
   /\bc\.\d+[A-Z]>[A-Z]\b/i,
   /\bp\.[A-Z][a-z]{2}\d+[A-Z][a-z]{2}\b/i,
-  
+
   // Classifications and results
   /\b(classification|clinical\s*significance|interpretation|result|finding)\b/i,
   /\b(positive|negative|detected|not\s*detected|normal|abnormal)\b/i,
   /\b(risk|carrier|status|inheritance|autosomal|dominant|recessive|x-linked)\b/i,
-  
+
   // Conditions and diseases (genetics context)
   /\b(hereditary|familial|genetic\s*condition|syndrome|disorder)\b/i,
   /\b(cancer\s*risk|breast\s*cancer|ovarian\s*cancer|colorectal|lynch)\b/i,
   /\b(cardiovascular|cardiac|heart\s*disease|cholesterol|lipid)\b/i,
   /\b(alzheimer|parkinson|huntington|cystic\s*fibrosis)\b/i,
-  
+
   // Testing terminology
   /\b(tested|analyzed|sequenced|genotyped|screened)\b/i,
   /\b(panel|exome|genome|sequencing|array|microarray)\b/i,
   /\b(coverage|depth|quality|confidence)\b/i,
-  
+
   // Lab/report specific
   /\b(clinvar|gnomad|dbsnp|omim|hgmd)\b/i,
   /\b(acmg|amp|guidelines|criteria)\b/i,
@@ -77,34 +77,34 @@ const NON_GENETICS_KEYWORDS = [
 function isGeneticsRelevant(text: string): boolean {
   // Check if text contains genetics keywords
   const hasGeneticsContent = GENETICS_KEYWORDS.some(pattern => pattern.test(text));
-  
+
   // Check if text is primarily non-genetics content
   const nonGeneticsMatches = NON_GENETICS_KEYWORDS.filter(pattern => pattern.test(text)).length;
   const geneticsMatches = GENETICS_KEYWORDS.filter(pattern => pattern.test(text)).length;
-  
+
   // Keep if has genetics content and not overwhelmingly non-genetics
   return hasGeneticsContent && (geneticsMatches >= nonGeneticsMatches);
 }
 
 function filterGeneticsContent(inputText: string): FilterResult {
   const originalLength = inputText.length;
-  
+
   // Split into sections (by double newlines or common section patterns)
   const sections = inputText.split(/\n{2,}|(?=^[A-Z][A-Z\s]{5,}:)/m).filter(s => s.trim());
-  
+
   const relevantSections: string[] = [];
   let sectionsRemoved = 0;
-  
+
   for (const section of sections) {
     const trimmed = section.trim();
     if (!trimmed) continue;
-    
+
     // Always keep very short sections (likely headers or important notes)
     if (trimmed.length < 50) {
       relevantSections.push(trimmed);
       continue;
     }
-    
+
     // Check if section is genetics-relevant
     if (isGeneticsRelevant(trimmed)) {
       relevantSections.push(trimmed);
@@ -112,9 +112,9 @@ function filterGeneticsContent(inputText: string): FilterResult {
       sectionsRemoved++;
     }
   }
-  
+
   const filteredText = relevantSections.join('\n\n');
-  
+
   return {
     text: filteredText,
     originalLength,
@@ -137,7 +137,7 @@ interface RedactionResult {
 // Patterns for common PII in genetic reports
 const PII_PATTERNS: { name: string; pattern: RegExp; replacement: string }[] = [
   // Names (after common labels)
-  { 
+  {
     name: 'Name',
     pattern: /\b(Patient|Customer|Name|Client|Participant)[\s:]*([A-Z][a-z]+(?:\s+[A-Z][a-z]+){1,3})\b/gi,
     replacement: '$1: [REDACTED NAME]'
@@ -267,7 +267,7 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
 
   const handleFileTextExtracted = (extractedText: string) => {
     let processedText = extractedText;
-    
+
     // Auto-filter if enabled (default ON)
     if (autoFilterEnabled) {
       const filterResult = filterGeneticsContent(extractedText);
@@ -276,7 +276,7 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
     } else {
       setFilterInfo(null);
     }
-    
+
     setText(processedText);
     setInputMethod("paste"); // Switch to paste view to show extracted text
     setError(null);
@@ -285,10 +285,10 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
 
   const handleAutoRedact = () => {
     if (!text.trim()) return;
-    
+
     const result = redactPII(text);
     setText(result.text);
-    
+
     if (result.redactedCount > 0) {
       setRedactionInfo({
         count: result.redactedCount,
@@ -301,7 +301,7 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
 
   const handleFilterGenetics = () => {
     if (!text.trim()) return;
-    
+
     const result = filterGeneticsContent(text);
     setText(result.text);
     setFilterInfo(result);
@@ -309,7 +309,7 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
 
   const handlePreviewPII = (): string[] => {
     if (!text.trim()) return [];
-    
+
     const found: string[] = [];
     for (const { name, pattern } of PII_PATTERNS) {
       const matches = text.match(pattern);
@@ -323,8 +323,9 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
   const detectedPII = text.trim() ? handlePreviewPII() : [];
 
   return (
-    <Card className="w-full shadow-sm">
-      <CardHeader>
+    <Card className="w-full lab-glass border-primary/10 shadow-xl relative overflow-hidden group">
+      <div className="absolute inset-0 tech-grid opacity-[0.03] pointer-events-none" />
+      <CardHeader className="relative z-10">
         <CardTitle className="flex items-center gap-2">
           <FileText className="h-5 w-5" />
           Analyze Your Genetic Report
@@ -335,16 +336,16 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
       </CardHeader>
       <CardContent className="space-y-4">
         {showWarning && (
-          <Alert variant="warning" className="relative">
-            <AlertTriangle className="h-4 w-4" />
-            <AlertDescription className="pr-8">
-              <strong>Privacy notice:</strong> Genetic data can be identifying. Only share information you&apos;re comfortable with. Consider redacting your name and other personal identifiers. We do not store your data.
+          <Alert variant="scientific" className="relative border-primary/20 bg-primary/5 py-4">
+            <Shield className="h-4 w-4 text-primary" />
+            <AlertDescription className="pr-20 text-primary/80 leading-relaxed">
+              <strong className="text-primary">Privacy Advisory:</strong> Genetic data is highly sensitive. For your protection, consider redacting personal identifiers before analysis. We process data in-session and do not retain genetic records.
             </AlertDescription>
             <button
               onClick={() => setShowWarning(false)}
-              className="absolute top-3 right-3 px-3 py-1 text-xs font-medium bg-amber-100 hover:bg-amber-200 text-amber-800 dark:bg-amber-900/30 dark:hover:bg-amber-900/50 dark:text-amber-300 rounded-full transition-colors"
+              className="absolute top-1/2 -translate-y-1/2 right-4 px-4 py-1.5 text-[10px] font-bold font-mono tracking-tight bg-primary text-white hover:bg-primary/90 rounded-[4px] transition-all shadow-sm hover:shadow-md uppercase"
             >
-              I Understand
+              Confirm
             </button>
           </Alert>
         )}
@@ -380,14 +381,12 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
                     role="switch"
                     aria-checked={analysisMode === "prebuilt_only"}
                     onClick={() => setAnalysisMode(analysisMode === "prebuilt_only" ? "auto" : "prebuilt_only")}
-                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                      analysisMode === "prebuilt_only" ? "bg-primary" : "bg-muted-foreground/30"
-                    }`}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${analysisMode === "prebuilt_only" ? "bg-primary" : "bg-muted-foreground/30"
+                      }`}
                   >
                     <span
-                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                        analysisMode === "prebuilt_only" ? "translate-x-6" : "translate-x-1"
-                      }`}
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${analysisMode === "prebuilt_only" ? "translate-x-6" : "translate-x-1"
+                        }`}
                     />
                   </button>
                   <span className="text-xs text-muted-foreground">$0</span>
@@ -427,7 +426,7 @@ Example content that can be analyzed:
                     </AlertDescription>
                   </Alert>
                 )}
-                
+
                 <div className="flex items-center gap-2">
                   <Button
                     type="button"
@@ -451,7 +450,7 @@ Example content that can be analyzed:
                     <AlertDescription className="text-sm">
                       {redactionInfo.count > 0 ? (
                         <>
-                          <strong>Redacted {redactionInfo.count} item(s):</strong> {redactionInfo.types.join(', ')}. 
+                          <strong>Redacted {redactionInfo.count} item(s):</strong> {redactionInfo.types.join(', ')}.
                           <span className="text-muted-foreground"> Please review the text to ensure all personal info is removed.</span>
                         </>
                       ) : (
@@ -483,8 +482,8 @@ Example content that can be analyzed:
                   <Alert variant="default" className="py-2">
                     <Filter className="h-4 w-4" />
                     <AlertDescription className="text-sm">
-                      <strong>Filtered:</strong> Kept {filterInfo.sectionsKept} genetics-relevant section(s), 
-                      removed {filterInfo.sectionsRemoved} non-genetics section(s). 
+                      <strong>Filtered:</strong> Kept {filterInfo.sectionsKept} genetics-relevant section(s),
+                      removed {filterInfo.sectionsRemoved} non-genetics section(s).
                       <span className="text-muted-foreground">
                         {' '}({Math.round((1 - filterInfo.filteredLength / filterInfo.originalLength) * 100)}% reduction)
                       </span>
@@ -510,14 +509,12 @@ Example content that can be analyzed:
                 role="switch"
                 aria-checked={autoFilterEnabled}
                 onClick={() => setAutoFilterEnabled(!autoFilterEnabled)}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                  autoFilterEnabled ? 'bg-primary' : 'bg-muted-foreground/30'
-                }`}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${autoFilterEnabled ? 'bg-primary' : 'bg-muted-foreground/30'
+                  }`}
               >
                 <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
-                    autoFilterEnabled ? 'translate-x-6' : 'translate-x-1'
-                  }`}
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${autoFilterEnabled ? 'translate-x-6' : 'translate-x-1'
+                    }`}
                 />
               </button>
             </div>
@@ -535,25 +532,26 @@ Example content that can be analyzed:
           </Alert>
         )}
 
-        <div className="flex gap-3">
-          <Button 
-            onClick={handleSubmit} 
+        <div className="flex gap-4 pt-2">
+          <Button
+            onClick={handleSubmit}
             disabled={isLoading || !text.trim()}
-            className="flex-1"
+            className="flex-1 h-12 text-sm font-bold shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all"
           >
             {isLoading ? (
               <>
                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Analyzing...
+                Processing Seq...
               </>
             ) : (
-              "Translate Report"
+              "Run Translation Engine"
             )}
           </Button>
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             onClick={() => setText("")}
             disabled={isLoading || !text}
+            className="h-12 border-primary/20 hover:bg-primary/5 transition-all"
           >
             Clear
           </Button>

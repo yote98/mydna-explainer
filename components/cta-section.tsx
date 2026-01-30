@@ -30,12 +30,12 @@ export default function CTASection() {
             <p className="text-muted-foreground mb-8">
               Start with education. Talk confidently with your doctor. Make informed decisions. 100% free, 100% private.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/translate" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link href="/translate" className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-[4px] text-sm font-semibold hover:bg-primary/95 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 active:translate-y-0">
                 Translate My Report
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="/lookup" className="inline-flex items-center justify-center gap-2 bg-white text-primary border border-primary/20 px-6 py-3 rounded-full text-sm font-medium hover:bg-primary/5 transition-colors">
+              <Link href="/lookup" className="inline-flex items-center justify-center gap-2 bg-white text-foreground border border-border px-8 py-4 rounded-[4px] text-sm font-semibold hover:bg-muted transition-all shadow-xs hover:shadow-sm">
                 Learn About Variants
               </Link>
             </div>

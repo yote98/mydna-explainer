@@ -1,8 +1,8 @@
 import type { Config } from "tailwindcss";
 
 export default {
-    darkMode: ["class"],
-    content: [
+  darkMode: ["class"],
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
@@ -10,9 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["DM Sans", "Geist Fallback", "sans-serif"],
-        serif: ["Playfair Display", "Georgia", "serif"],
-        mono: ["JetBrains Mono", "Geist Mono", "monospace"],
+        sans: ["var(--font-dm-sans)", "sans-serif"],
+        serif: ["var(--font-playfair)", "serif"],
+        mono: ["var(--font-jetbrains)", "monospace"],
       },
       colors: {
         background: "hsl(var(--background))",
