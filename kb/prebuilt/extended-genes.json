@@ -1,0 +1,2004 @@
+{
+  "genes": {
+    "CHEK2": {
+      "full_name": "Checkpoint Kinase 2",
+      "description": "CHEK2 helps the cell respond to DNA damage. Some pathogenic variants can increase the chance of certain cancers, especially when combined with family history.",
+      "associated_conditions": ["Hereditary cancer predisposition (moderate risk)"],
+      "inheritance": "Autosomal dominant",
+      "penetrance": "Increased risk (varies by variant and family history)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic variant in CHEK2 has been reported. This can be associated with an increased chance of certain cancers, but the impact varies by the exact variant and your family history.",
+          "what_this_means": [
+            "This is a meaningful genetic finding, but it is not a diagnosis",
+            "Your personal risk depends on the specific variant plus personal/family history",
+            "Many people with CHEK2 variants never develop cancer"
+          ],
+          "what_this_does_not_mean": [
+            "This does NOT mean cancer is inevitable",
+            "This does NOT mean you need immediate treatment",
+            "This does NOT replace professional risk assessment"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss how this result changes screening based on your history",
+              "urgency": "important"
+            }
+          ],
+          "questions_to_ask": [
+            "What screening schedule fits my family history and this CHEK2 result?",
+            "Does the specific CHEK2 variant matter for risk?",
+            "Should my close relatives consider confirmatory testing?"
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in CHEK2 means it is not currently known to be harmful or harmless. Most VUS do not end up changing medical care.",
+          "what_this_means": [
+            "It is an inconclusive result, not a positive finding",
+            "Your screening should be based on personal/family history"
+          ],
+          "what_this_does_not_mean": [
+            "This is NOT proof of increased cancer risk",
+            "This should NOT drive major medical decisions"
+          ],
+          "next_steps": [
+            {
+              "title": "Re-check classification over time",
+              "description": "Ask how you will be notified if the variant is reclassified",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "PALB2": {
+      "full_name": "Partner and Localizer of BRCA2",
+      "description": "PALB2 works with BRCA proteins in DNA repair. Some pathogenic variants are linked to hereditary cancer predisposition.",
+      "associated_conditions": ["Hereditary cancer predisposition"],
+      "inheritance": "Autosomal dominant",
+      "penetrance": "Increased risk (varies by variant and family history)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic variant in PALB2 has been reported. This can be associated with an increased chance of certain cancers, but interpretation depends on the exact variant and family history.",
+          "what_this_means": [
+            "This result is important to review with a genetics professional",
+            "It is not a diagnosis and does not predict certainty"
+          ],
+          "what_this_does_not_mean": [
+            "This does NOT mean you currently have cancer",
+            "This does NOT mean cancer is guaranteed"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss screening and family implications",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in PALB2 means there is not enough evidence to classify it as harmful or harmless.",
+          "what_this_means": [
+            "Most VUS are later found to be benign",
+            "Management should be based on family history"
+          ],
+          "what_this_does_not_mean": [
+            "This is NOT a confirmed increased risk finding"
+          ]
+        }
+      }
+    },
+    "ATM": {
+      "full_name": "ATM Serine/Threonine Kinase",
+      "description": "ATM helps cells detect and repair DNA damage. Some pathogenic variants can be linked to hereditary cancer predisposition.",
+      "associated_conditions": ["Hereditary cancer predisposition (moderate risk)"],
+      "inheritance": "Autosomal dominant (for predisposition variants)",
+      "penetrance": "Increased risk (varies by variant and family history)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic ATM variant has been reported. This can be associated with increased risk for certain cancers, but the risk depends on the exact variant and your history.",
+          "what_this_means": [
+            "This is not a diagnosis",
+            "A genetics professional can help interpret the result"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Review cancer screening recommendations in the context of family history",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in ATM is an inconclusive result and should not be treated as a positive finding.",
+          "what_this_means": ["Most VUS are later reclassified as benign"],
+          "what_this_does_not_mean": ["This should not drive major medical decisions"]
+        }
+      }
+    },
+    "TP53": {
+      "full_name": "Tumor Protein p53",
+      "description": "TP53 is a major tumor suppressor gene. Pathogenic variants can be associated with Li-Fraumeni syndrome, which requires expert interpretation and management.",
+      "associated_conditions": ["Li-Fraumeni syndrome (LFS)", "Hereditary cancer predisposition"],
+      "inheritance": "Autosomal dominant",
+      "penetrance": "Often associated with high lifetime cancer risk (varies by individual and family history)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic TP53 variant has been reported. This is a significant finding that should be reviewed promptly with a certified genetics professional to understand appropriate next steps.",
+          "what_this_means": [
+            "This can be associated with a hereditary cancer syndrome",
+            "Expert-guided surveillance can be important"
+          ],
+          "what_this_does_not_mean": [
+            "This is NOT a current cancer diagnosis",
+            "This does NOT predict a specific outcome for an individual"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling (priority)",
+              "description": "Discuss confirmatory testing (if needed) and appropriate surveillance plans",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in TP53 is not the same as a pathogenic variant and should not be treated as a positive finding.",
+          "what_this_means": [
+            "It means the evidence is currently insufficient to classify the variant",
+            "Family/personal history remains the main driver of screening decisions"
+          ]
+        }
+      }
+    },
+    "MLH1": {
+      "full_name": "MutL Homolog 1",
+      "description": "MLH1 is involved in DNA mismatch repair. Some pathogenic variants are associated with Lynch syndrome, a hereditary cancer predisposition condition.",
+      "associated_conditions": ["Lynch syndrome (hereditary colorectal/endometrial cancer predisposition)"],
+      "inheritance": "Autosomal dominant",
+      "penetrance": "Increased risk (varies by variant and family history)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic MLH1 variant has been reported. This can be associated with Lynch syndrome and should be reviewed with a genetics professional for appropriate screening guidance.",
+          "what_this_means": [
+            "This is important for cancer screening planning",
+            "It is not a diagnosis"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss Lynch syndrome screening recommendations and family testing considerations",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in MLH1 is an inconclusive finding and should not be treated as a positive Lynch syndrome result.",
+          "what_this_means": ["Medical care is usually guided by family history until reclassification"]
+        }
+      }
+    },
+    "MSH2": {
+      "full_name": "MutS Homolog 2",
+      "description": "MSH2 is a DNA mismatch repair gene. Some pathogenic variants are associated with Lynch syndrome.",
+      "associated_conditions": ["Lynch syndrome (hereditary colorectal/endometrial cancer predisposition)"],
+      "inheritance": "Autosomal dominant",
+      "penetrance": "Increased risk (varies by variant and family history)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic MSH2 variant has been reported. This can be associated with Lynch syndrome and should be reviewed with a genetics professional.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss appropriate screening and family implications",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in MSH2 is inconclusive and is not the same as a positive Lynch syndrome result."
+        }
+      }
+    },
+    "MSH6": {
+      "full_name": "MutS Homolog 6",
+      "description": "MSH6 is a DNA mismatch repair gene. Some pathogenic variants are associated with Lynch syndrome.",
+      "associated_conditions": ["Lynch syndrome (hereditary colorectal/endometrial cancer predisposition)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic MSH6 variant has been reported. This may be associated with Lynch syndrome and should be interpreted with professional guidance.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss screening recommendations and family testing considerations",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in MSH6 is inconclusive and should not be treated as a positive finding."
+        }
+      }
+    },
+    "PMS2": {
+      "full_name": "PMS1 Homolog 2",
+      "description": "PMS2 is a DNA mismatch repair gene. Some pathogenic variants are associated with Lynch syndrome.",
+      "associated_conditions": ["Lynch syndrome (hereditary colorectal/endometrial cancer predisposition)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic PMS2 variant has been reported. This may be associated with Lynch syndrome and should be reviewed with a genetics professional.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss screening and whether relatives should consider testing",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in PMS2 is inconclusive and should not be treated as a positive Lynch syndrome result."
+        }
+      }
+    },
+    "APC": {
+      "full_name": "Adenomatous Polyposis Coli",
+      "description": "APC is associated with familial adenomatous polyposis (FAP) when certain pathogenic variants are present. Interpretation and management should be guided by specialists.",
+      "associated_conditions": ["Familial adenomatous polyposis (FAP)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic APC variant has been reported. This can be associated with an inherited colon polyp/cancer predisposition condition and warrants specialist guidance.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss confirmatory testing (if needed) and appropriate surveillance plans",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in APC is inconclusive and should not be treated as a positive FAP result."
+        }
+      }
+    },
+    "MUTYH": {
+      "full_name": "MutY DNA Glycosylase",
+      "description": "MUTYH is linked to colon polyp/cancer risk in certain situations. Interpretation depends on whether one (carrier) or two copies are affected.",
+      "associated_conditions": ["MUTYH-associated polyposis (MAP)"],
+      "inheritance": "Autosomal recessive (classic MAP requires two pathogenic variants)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic MUTYH variant has been reported. Meaning depends on whether one or two copies are affected; a genetics professional can clarify implications.",
+          "what_this_means": [
+            "One pathogenic variant may indicate carrier status",
+            "Two pathogenic variants can be associated with a higher-risk condition"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Clarify whether this is one-copy (carrier) or two-copy finding and discuss screening",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in MUTYH is inconclusive and should not be treated as a confirmed risk finding."
+        }
+      }
+    },
+    "LDLR": {
+      "full_name": "Low Density Lipoprotein Receptor",
+      "description": "LDLR plays a key role in cholesterol metabolism. Some pathogenic variants are associated with familial hypercholesterolemia (FH).",
+      "associated_conditions": ["Familial hypercholesterolemia (FH)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic LDLR variant has been reported. This can be associated with familial hypercholesterolemia and should be reviewed with a clinician, along with cholesterol lab results.",
+          "what_this_means": [
+            "This may explain high LDL cholesterol in some people",
+            "Risk management depends on labs and overall risk profile"
+          ],
+          "what_this_does_not_mean": [
+            "This is not a heart disease diagnosis",
+            "Genetics is only one part of cardiovascular risk"
+          ],
+          "next_steps": [
+            {
+              "title": "Discuss with your clinician",
+              "description": "Review cholesterol labs, family history, and whether confirmatory testing is recommended",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in LDLR is inconclusive and should not be treated as a confirmed FH diagnosis."
+        }
+      }
+    },
+    "HFE": {
+      "full_name": "Homeostatic Iron Regulator",
+      "description": "HFE variants can be related to hereditary hemochromatosis (iron overload) in some cases. Interpretation depends on the specific variants and lab results (iron studies).",
+      "associated_conditions": ["Hereditary hemochromatosis (risk depends on genotype)"],
+      "inheritance": "Autosomal recessive (classic forms typically require two affected copies)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A reported HFE result may be relevant to iron overload risk, but interpretation depends on the specific variant combination and iron lab tests.",
+          "what_this_means": [
+            "Lab tests (ferritin, transferrin saturation) are key for interpretation",
+            "Many people with common HFE variants never develop iron overload"
+          ],
+          "next_steps": [
+            {
+              "title": "Review iron labs",
+              "description": "Discuss whether iron studies are appropriate and how to interpret them with this result",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+
+    "APOB": {
+      "full_name": "Apolipoprotein B",
+      "description": "APOB helps transport cholesterol in the blood. Some pathogenic variants are associated with inherited cholesterol disorders (including familial hypercholesterolemia).",
+      "associated_conditions": ["Inherited cholesterol disorders (familial hypercholesterolemia spectrum)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic APOB variant has been reported. This can be relevant to inherited high cholesterol, but interpretation should include cholesterol blood tests and family history.",
+          "what_this_means": [
+            "This may help explain high LDL cholesterol in some people",
+            "Lab results and overall cardiovascular risk factors still matter",
+            "This is not a diagnosis of heart disease"
+          ],
+          "next_steps": [
+            {
+              "title": "Review cholesterol labs with a clinician",
+              "description": "Discuss LDL levels, family history, and whether confirmatory testing is appropriate",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in APOB is inconclusive and should not be treated as a confirmed inherited cholesterol diagnosis."
+        }
+      }
+    },
+    "PCSK9": {
+      "full_name": "Proprotein Convertase Subtilisin/Kexin Type 9",
+      "description": "PCSK9 affects how the body clears LDL cholesterol. Some variants can be associated with inherited cholesterol differences.",
+      "associated_conditions": ["Inherited cholesterol differences (familial hypercholesterolemia spectrum)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic PCSK9 variant has been reported. This may be relevant to LDL cholesterol levels and should be interpreted with lab results and family history.",
+          "what_this_means": [
+            "Genetics is only one part of cardiovascular risk",
+            "Clinical context (labs, age, other risk factors) matters"
+          ],
+          "next_steps": [
+            {
+              "title": "Discuss with your clinician",
+              "description": "Review cholesterol labs and whether confirmatory testing is recommended",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in PCSK9 is inconclusive and should not be treated as a confirmed inherited cholesterol diagnosis."
+        }
+      }
+    },
+
+    "MYH7": {
+      "full_name": "Myosin Heavy Chain 7",
+      "description": "MYH7 is involved in heart muscle structure and function. Some pathogenic variants are associated with inherited cardiomyopathy conditions.",
+      "associated_conditions": ["Inherited cardiomyopathy (e.g., hypertrophic/dilated cardiomyopathy)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic MYH7 variant has been reported. This can be associated with inherited cardiomyopathy and should be reviewed with a clinician experienced in cardiac genetics.",
+          "what_this_means": [
+            "This is not a diagnosis by itself",
+            "Family history and heart testing (e.g., ECG/echo) are usually part of interpretation"
+          ],
+          "next_steps": [
+            {
+              "title": "Cardiology / genetic counseling",
+              "description": "Discuss whether clinical evaluation and confirmatory testing are recommended",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in MYH7 is inconclusive and should not be treated as a confirmed cardiomyopathy diagnosis."
+        }
+      }
+    },
+    "MYBPC3": {
+      "full_name": "Myosin Binding Protein C3",
+      "description": "MYBPC3 helps regulate heart muscle contraction. Some pathogenic variants are associated with inherited cardiomyopathy conditions.",
+      "associated_conditions": ["Inherited cardiomyopathy (e.g., hypertrophic cardiomyopathy)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic MYBPC3 variant has been reported. This can be associated with inherited cardiomyopathy and is best interpreted with specialist guidance.",
+          "what_this_means": [
+            "Clinical evaluation often includes ECG/echo and family history review",
+            "This is not a diagnosis by itself"
+          ],
+          "next_steps": [
+            {
+              "title": "Cardiology / genetic counseling",
+              "description": "Discuss whether follow-up testing and family screening are appropriate",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in MYBPC3 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "KCNQ1": {
+      "full_name": "Potassium Voltage-Gated Channel Subfamily Q Member 1",
+      "description": "KCNQ1 is involved in heart rhythm. Some pathogenic variants are associated with inherited arrhythmia syndromes such as long QT syndrome.",
+      "associated_conditions": ["Inherited arrhythmia syndromes (e.g., long QT syndrome)"],
+      "inheritance": "Autosomal dominant (some forms can be recessive)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic KCNQ1 variant has been reported. This may be associated with an inherited heart rhythm condition and should be reviewed with a cardiology genetics specialist.",
+          "what_this_means": [
+            "Interpretation often includes ECG findings and family history",
+            "This is not a diagnosis by itself"
+          ],
+          "next_steps": [
+            {
+              "title": "Cardiology evaluation",
+              "description": "Discuss ECG-based evaluation, confirmatory testing, and family implications",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in KCNQ1 is inconclusive and should not be treated as a confirmed arrhythmia diagnosis."
+        }
+      }
+    },
+    "KCNH2": {
+      "full_name": "Potassium Voltage-Gated Channel Subfamily H Member 2",
+      "description": "KCNH2 is involved in heart rhythm. Some pathogenic variants are associated with inherited arrhythmia syndromes such as long QT syndrome.",
+      "associated_conditions": ["Inherited arrhythmia syndromes (e.g., long QT syndrome)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic KCNH2 variant has been reported. This may be relevant to inherited heart rhythm conditions and needs specialist interpretation.",
+          "next_steps": [
+            {
+              "title": "Cardiology / genetic counseling",
+              "description": "Discuss whether ECG evaluation, confirmatory testing, or family screening is appropriate",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in KCNH2 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "SCN5A": {
+      "full_name": "Sodium Voltage-Gated Channel Alpha Subunit 5",
+      "description": "SCN5A affects electrical signaling in the heart. Some pathogenic variants are associated with inherited arrhythmia syndromes.",
+      "associated_conditions": ["Inherited arrhythmia syndromes (varies by variant and context)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic SCN5A variant has been reported. This can be associated with inherited heart rhythm conditions and should be reviewed with a cardiology genetics specialist.",
+          "what_this_means": [
+            "Clinical context (ECG findings, symptoms, family history) is important",
+            "This is not a diagnosis by itself"
+          ],
+          "next_steps": [
+            {
+              "title": "Cardiology evaluation",
+              "description": "Discuss confirmatory testing and appropriate heart rhythm evaluation",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in SCN5A is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "RYR2": {
+      "full_name": "Ryanodine Receptor 2",
+      "description": "RYR2 is involved in calcium signaling in heart muscle. Some pathogenic variants are associated with inherited arrhythmia conditions.",
+      "associated_conditions": ["Inherited arrhythmia syndromes (e.g., CPVT)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic RYR2 variant has been reported. This may be relevant to inherited arrhythmia risk and should be interpreted with specialist guidance.",
+          "next_steps": [
+            {
+              "title": "Cardiology / genetic counseling",
+              "description": "Discuss confirmatory testing and whether exercise-related rhythm evaluation is appropriate",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in RYR2 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "LMNA": {
+      "full_name": "Lamin A/C",
+      "description": "LMNA affects cell structure. Some pathogenic variants are associated with inherited cardiomyopathy and conduction disorders.",
+      "associated_conditions": ["Inherited cardiomyopathy / conduction disease"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic LMNA variant has been reported. This can be associated with inherited heart muscle and electrical conduction problems and warrants specialist review.",
+          "next_steps": [
+            {
+              "title": "Cardiology evaluation",
+              "description": "Discuss appropriate cardiac monitoring and confirmatory testing",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in LMNA is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "DSP": {
+      "full_name": "Desmoplakin",
+      "description": "DSP helps hold heart muscle cells together. Some pathogenic variants are associated with inherited cardiomyopathy conditions.",
+      "associated_conditions": ["Inherited cardiomyopathy (arrhythmogenic cardiomyopathy spectrum)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic DSP variant has been reported. This may be relevant to inherited cardiomyopathy and should be interpreted with cardiology genetics guidance.",
+          "next_steps": [
+            {
+              "title": "Cardiology / genetic counseling",
+              "description": "Discuss confirmatory testing and heart evaluation appropriate to your context",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in DSP is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+
+    "BRIP1": {
+      "full_name": "BRCA1 Interacting Protein C-Terminal Helicase 1",
+      "description": "BRIP1 participates in DNA repair. Some pathogenic variants are associated with hereditary cancer predisposition.",
+      "associated_conditions": ["Hereditary cancer predisposition"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic BRIP1 variant has been reported. This can be associated with hereditary cancer predisposition and is best reviewed with a genetics professional.",
+          "what_this_means": [
+            "This is not a diagnosis",
+            "Family history and the exact variant matter for interpretation"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss screening guidance and whether confirmatory testing is recommended",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in BRIP1 is inconclusive and should not be treated as a confirmed increased risk finding."
+        }
+      }
+    },
+    "RAD51C": {
+      "full_name": "RAD51 Paralog C",
+      "description": "RAD51C is involved in DNA repair. Some pathogenic variants are associated with hereditary cancer predisposition.",
+      "associated_conditions": ["Hereditary cancer predisposition"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic RAD51C variant has been reported. This can be relevant to hereditary cancer predisposition and should be interpreted with professional guidance.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss screening and family implications",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in RAD51C is inconclusive and should not be treated as a confirmed risk finding."
+        }
+      }
+    },
+    "RAD51D": {
+      "full_name": "RAD51 Paralog D",
+      "description": "RAD51D is involved in DNA repair. Some pathogenic variants are associated with hereditary cancer predisposition.",
+      "associated_conditions": ["Hereditary cancer predisposition"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic RAD51D variant has been reported. This can be relevant to hereditary cancer predisposition and should be reviewed with a genetics professional.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss screening guidance and family testing considerations",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in RAD51D is inconclusive and should not be treated as a confirmed risk finding."
+        }
+      }
+    },
+    "BARD1": {
+      "full_name": "BRCA1 Associated RING Domain 1",
+      "description": "BARD1 works with BRCA1 in DNA repair. Some pathogenic variants are associated with hereditary cancer predisposition.",
+      "associated_conditions": ["Hereditary cancer predisposition"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic BARD1 variant has been reported. This may be relevant to hereditary cancer predisposition and should be interpreted with professional guidance.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Review screening recommendations in the context of personal/family history",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in BARD1 is inconclusive and should not be treated as a confirmed increased risk finding."
+        }
+      }
+    },
+    "PTEN": {
+      "full_name": "Phosphatase and Tensin Homolog",
+      "description": "PTEN is a tumor suppressor gene. Some pathogenic variants are associated with hereditary cancer predisposition syndromes and require specialist interpretation.",
+      "associated_conditions": ["Hereditary cancer predisposition (PTEN hamartoma tumor syndrome spectrum)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic PTEN variant has been reported. This is an important finding that should be reviewed with a genetics professional for appropriate surveillance planning.",
+          "what_this_does_not_mean": [
+            "This is NOT a current cancer diagnosis",
+            "It does NOT predict an exact outcome for an individual"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling (priority)",
+              "description": "Discuss confirmatory testing (if needed) and recommended surveillance",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in PTEN is inconclusive and should not be treated as a confirmed syndrome diagnosis."
+        }
+      }
+    },
+    "STK11": {
+      "full_name": "Serine/Threonine Kinase 11",
+      "description": "STK11 is a tumor suppressor gene. Some pathogenic variants are associated with Peutz-Jeghers syndrome and require specialist interpretation.",
+      "associated_conditions": ["Peutz-Jeghers syndrome (hereditary cancer predisposition)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic STK11 variant has been reported. This is an important finding that warrants genetics specialist guidance.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling (priority)",
+              "description": "Discuss confirmatory testing (if needed) and appropriate surveillance planning",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in STK11 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "CDH1": {
+      "full_name": "Cadherin 1",
+      "description": "CDH1 is involved in cell adhesion. Some pathogenic variants are associated with hereditary cancer predisposition syndromes and require specialist guidance.",
+      "associated_conditions": ["Hereditary cancer predisposition (e.g., diffuse gastric cancer/breast cancer spectrum)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic CDH1 variant has been reported. This is a significant finding that should be reviewed with a genetics professional for personalized guidance.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling (priority)",
+              "description": "Discuss confirmatory testing and appropriate surveillance options",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in CDH1 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "EPCAM": {
+      "full_name": "Epithelial Cell Adhesion Molecule",
+      "description": "EPCAM deletions can affect DNA mismatch repair and may be associated with Lynch syndrome in some contexts.",
+      "associated_conditions": ["Lynch syndrome (in specific EPCAM deletion contexts)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic EPCAM finding has been reported. This may be relevant to Lynch syndrome and should be reviewed with a genetics professional.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss whether this finding affects mismatch repair genes and screening recommendations",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in EPCAM is inconclusive and should not be treated as a confirmed Lynch syndrome result."
+        }
+      }
+    },
+    "CDKN2A": {
+      "full_name": "Cyclin Dependent Kinase Inhibitor 2A",
+      "description": "CDKN2A is a tumor suppressor gene. Some pathogenic variants are associated with hereditary cancer predisposition.",
+      "associated_conditions": ["Hereditary cancer predisposition"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic CDKN2A variant has been reported. This can be relevant to hereditary cancer predisposition and should be reviewed with a genetics professional.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss appropriate surveillance and family implications",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in CDKN2A is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "RET": {
+      "full_name": "Ret Proto-Oncogene",
+      "description": "RET is involved in cell signaling. Some pathogenic variants are associated with inherited endocrine tumor syndromes and require specialist interpretation.",
+      "associated_conditions": ["Inherited endocrine tumor syndromes (e.g., MEN2 spectrum)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic RET variant has been reported. This is an important finding that warrants genetics and endocrinology specialist guidance.",
+          "what_this_does_not_mean": [
+            "This is NOT a current cancer diagnosis",
+            "It does NOT replace professional evaluation"
+          ],
+          "next_steps": [
+            {
+              "title": "Genetic Counseling / specialist care",
+              "description": "Discuss confirmatory testing and appropriate clinical evaluation",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in RET is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "VHL": {
+      "full_name": "Von Hippel-Lindau Tumor Suppressor",
+      "description": "VHL is a tumor suppressor gene. Some pathogenic variants are associated with von Hippel-Lindau disease and require specialist guidance.",
+      "associated_conditions": ["Von Hippel-Lindau disease (hereditary tumor predisposition)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic VHL variant has been reported. This is a significant hereditary tumor predisposition finding and should be reviewed with a genetics professional.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling (priority)",
+              "description": "Discuss confirmatory testing (if needed) and appropriate surveillance planning",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in VHL is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "MEN1": {
+      "full_name": "Menin 1",
+      "description": "MEN1 is associated with multiple endocrine neoplasia type 1 when certain pathogenic variants are present.",
+      "associated_conditions": ["Multiple endocrine neoplasia type 1 (MEN1)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic MEN1 variant has been reported. This finding warrants specialist guidance for appropriate evaluation and follow-up.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling / specialist care",
+              "description": "Discuss confirmatory testing (if needed) and appropriate clinical evaluation",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in MEN1 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "TSC1": {
+      "full_name": "TSC Complex Subunit 1",
+      "description": "TSC1 is involved in cell growth regulation. Some pathogenic variants are associated with tuberous sclerosis complex and require specialist guidance.",
+      "associated_conditions": ["Tuberous sclerosis complex (TSC)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic TSC1 variant has been reported. This finding warrants specialist interpretation and appropriate clinical follow-up.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss confirmatory testing and appropriate evaluation",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in TSC1 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "TSC2": {
+      "full_name": "TSC Complex Subunit 2",
+      "description": "TSC2 is involved in cell growth regulation. Some pathogenic variants are associated with tuberous sclerosis complex and require specialist guidance.",
+      "associated_conditions": ["Tuberous sclerosis complex (TSC)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic TSC2 variant has been reported. This finding warrants specialist interpretation and appropriate clinical follow-up.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss confirmatory testing and appropriate evaluation",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in TSC2 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "SDHB": {
+      "full_name": "Succinate Dehydrogenase Complex Iron Sulfur Subunit B",
+      "description": "SDHB is part of mitochondrial energy metabolism. Some pathogenic variants are associated with hereditary tumor predisposition and require specialist guidance.",
+      "associated_conditions": ["Hereditary tumor predisposition (SDHx-related)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic SDHB variant has been reported. This is an important finding that should be reviewed with a genetics professional for appropriate follow-up planning.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss confirmatory testing and appropriate evaluation/surveillance",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in SDHB is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "SDHD": {
+      "full_name": "Succinate Dehydrogenase Complex Subunit D",
+      "description": "SDHD is part of mitochondrial energy metabolism. Some pathogenic variants are associated with hereditary tumor predisposition and require specialist guidance.",
+      "associated_conditions": ["Hereditary tumor predisposition (SDHx-related)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic SDHD variant has been reported. This finding should be reviewed with a genetics professional for appropriate follow-up planning.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss confirmatory testing and evaluation/surveillance recommendations",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in SDHD is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "SDHC": {
+      "full_name": "Succinate Dehydrogenase Complex Subunit C",
+      "description": "SDHC is part of mitochondrial energy metabolism. Some pathogenic variants are associated with hereditary tumor predisposition and require specialist guidance.",
+      "associated_conditions": ["Hereditary tumor predisposition (SDHx-related)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic SDHC variant has been reported. This finding should be reviewed with a genetics professional for appropriate follow-up planning.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss confirmatory testing and evaluation/surveillance recommendations",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in SDHC is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "SDHA": {
+      "full_name": "Succinate Dehydrogenase Complex Flavoprotein Subunit A",
+      "description": "SDHA is part of mitochondrial energy metabolism. Some pathogenic variants are associated with hereditary tumor predisposition and require specialist guidance.",
+      "associated_conditions": ["Hereditary tumor predisposition (SDHx-related)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic SDHA variant has been reported. This finding should be reviewed with a genetics professional for appropriate follow-up planning.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss confirmatory testing and evaluation/surveillance recommendations",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in SDHA is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "NF1": {
+      "full_name": "Neurofibromin 1",
+      "description": "NF1 is associated with neurofibromatosis type 1 when certain pathogenic variants are present. Interpretation should be guided by specialists.",
+      "associated_conditions": ["Neurofibromatosis type 1 (NF1)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic NF1 variant has been reported. This finding warrants specialist interpretation and appropriate clinical follow-up.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling / specialist care",
+              "description": "Discuss confirmatory testing (if needed) and appropriate evaluation",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in NF1 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "NF2": {
+      "full_name": "Neurofibromin 2",
+      "description": "NF2 is associated with neurofibromatosis type 2 spectrum disorders when certain pathogenic variants are present.",
+      "associated_conditions": ["NF2-related schwannomatosis spectrum"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic NF2 variant has been reported. This finding warrants specialist interpretation and clinical context review.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling / specialist care",
+              "description": "Discuss confirmatory testing (if needed) and appropriate evaluation",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in NF2 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "BAP1": {
+      "full_name": "BRCA1 Associated Protein 1",
+      "description": "BAP1 is a tumor suppressor gene. Some pathogenic variants are associated with hereditary cancer predisposition and require specialist guidance.",
+      "associated_conditions": ["Hereditary cancer predisposition (BAP1 tumor predisposition spectrum)"],
+      "inheritance": "Autosomal dominant",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic BAP1 variant has been reported. This is a significant finding that warrants genetics specialist guidance.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss confirmatory testing (if needed) and recommended surveillance",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in BAP1 is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "MITF": {
+      "full_name": "Microphthalmia-Associated Transcription Factor",
+      "description": "MITF is involved in cell development and function. Some variants have been discussed in relation to hereditary cancer predisposition in specific contexts.",
+      "associated_conditions": ["Hereditary cancer predisposition (context-dependent)"],
+      "inheritance": "Autosomal dominant (context-dependent)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic MITF finding has been reported. Interpretation can be nuanced and should include professional guidance and clinical context.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss what is known about this specific MITF finding and what follow-up is appropriate",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in MITF is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "NBN": {
+      "full_name": "Nibrin",
+      "description": "NBN is involved in DNA repair. Some pathogenic variants are associated with hereditary cancer predisposition in certain contexts.",
+      "associated_conditions": ["Hereditary cancer predisposition (context-dependent)"],
+      "inheritance": "Autosomal dominant (some conditions are recessive)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic NBN variant has been reported. Interpretation depends on the specific variant and personal/family history.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss what this specific NBN finding means for screening and family considerations",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in NBN is inconclusive and should not be treated as a confirmed increased risk finding."
+        }
+      }
+    },
+    "POLE": {
+      "full_name": "DNA Polymerase Epsilon, Catalytic Subunit",
+      "description": "POLE is involved in DNA replication and repair. Some pathogenic variants are associated with hereditary cancer predisposition syndromes in specific contexts.",
+      "associated_conditions": ["Hereditary cancer predisposition (polymerase proofreading-associated)"],
+      "inheritance": "Autosomal dominant (context-dependent)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic POLE variant has been reported. This finding should be reviewed with a genetics professional for appropriate guidance.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss whether this finding changes screening recommendations",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in POLE is inconclusive and should not be treated as a confirmed syndrome diagnosis."
+        }
+      }
+    },
+    "POLD1": {
+      "full_name": "DNA Polymerase Delta 1, Catalytic Subunit",
+      "description": "POLD1 is involved in DNA replication and repair. Some pathogenic variants are associated with hereditary cancer predisposition syndromes in specific contexts.",
+      "associated_conditions": ["Hereditary cancer predisposition (polymerase proofreading-associated)"],
+      "inheritance": "Autosomal dominant (context-dependent)",
+      "responses": {
+        "pathogenic": {
+          "summary": "A pathogenic/likely pathogenic POLD1 variant has been reported. This finding should be reviewed with a genetics professional for appropriate guidance.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss whether this finding changes screening recommendations",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in POLD1 is inconclusive and should not be treated as a confirmed syndrome diagnosis."
+        }
+      }
+    },
+
+    "CFTR": {
+      "full_name": "Cystic Fibrosis Transmembrane Conductance Regulator",
+      "description": "CFTR is associated with cystic fibrosis when certain pathogenic variants are present in both copies (one from each parent).",
+      "associated_conditions": ["Cystic fibrosis (recessive)"],
+      "inheritance": "Autosomal recessive",
+      "responses": {
+        "carrier": {
+          "summary": "A CFTR carrier result usually means one copy of a pathogenic/likely pathogenic variant was found. Carriers typically do not have cystic fibrosis, but carrier status can matter for family planning.",
+          "what_this_means": [
+            "Carrier status usually does not cause disease by itself",
+            "If a partner is also a carrier, there can be reproductive implications"
+          ],
+          "next_steps": [
+            {
+              "title": "Consider partner testing (if relevant)",
+              "description": "Discuss carrier screening options if planning a pregnancy",
+              "urgency": "routine"
+            }
+          ],
+          "questions_to_ask": [
+            "Does my report specify one variant or more than one?",
+            "Should my partner be tested for CFTR carrier status?"
+          ]
+        },
+        "pathogenic": {
+          "summary": "A CFTR finding may indicate carrier status or (less commonly) a two-copy result depending on the report. Interpretation depends on the number of affected copies and the exact variants.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Clarify whether this is carrier status vs a two-copy finding and what it means in your context",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in CFTR is inconclusive and should not be treated as a confirmed carrier or disease result."
+        }
+      }
+    },
+    "SMN1": {
+      "full_name": "Survival Motor Neuron 1",
+      "description": "SMN1 is associated with spinal muscular atrophy (SMA) when certain variants affect both copies or when SMN1 copy number is reduced. Many reports describe carrier screening.",
+      "associated_conditions": ["Spinal muscular atrophy (SMA) (recessive)"],
+      "inheritance": "Autosomal recessive",
+      "responses": {
+        "carrier": {
+          "summary": "An SMN1 carrier screening result suggests carrier status may be present. Interpretation can depend on copy-number methods and the report details.",
+          "what_this_means": [
+            "Carrier status typically does not cause SMA",
+            "Partner testing can matter for family planning"
+          ],
+          "next_steps": [
+            {
+              "title": "Review the exact method/result",
+              "description": "SMN1 screening often involves copy-number details; discuss with a professional if planning a family",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "An SMN1 finding may indicate carrier status or another report-specific result. A genetics professional can clarify implications based on the exact method and result format.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Clarify what this SMN1 result means for you and (if relevant) family planning",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in SMN1 is inconclusive and should not be treated as a confirmed carrier or disease result."
+        }
+      }
+    },
+    "HBB": {
+      "full_name": "Hemoglobin Subunit Beta",
+      "description": "HBB is associated with beta-thalassemia and sickle cell disease when certain pathogenic variants affect hemoglobin.",
+      "associated_conditions": ["Beta-thalassemia (recessive)", "Sickle cell disease (recessive)"],
+      "inheritance": "Autosomal recessive",
+      "responses": {
+        "carrier": {
+          "summary": "An HBB carrier result often means one copy of a pathogenic/likely pathogenic variant was found. Carriers may have mild blood test changes but typically do not have the full disease.",
+          "next_steps": [
+            {
+              "title": "Consider confirmatory blood testing",
+              "description": "A clinician may review CBC/hemoglobin electrophoresis depending on the finding and your background",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "An HBB finding may indicate carrier status or another report-specific result. Interpretation depends on the exact variant(s) and whether one or both copies are affected.",
+          "next_steps": [
+            {
+              "title": "Discuss with a clinician/genetic counselor",
+              "description": "Clarify whether this result indicates carrier status or a two-copy finding",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in HBB is inconclusive and should not be treated as a confirmed carrier or disease result."
+        }
+      }
+    },
+    "HBA1": {
+      "full_name": "Hemoglobin Subunit Alpha 1",
+      "description": "HBA1 contributes to hemoglobin. Some variants can be associated with alpha-thalassemia depending on the type and number of affected copies.",
+      "associated_conditions": ["Alpha-thalassemia spectrum (recessive / copy-number dependent)"],
+      "inheritance": "Autosomal recessive (copy-number dependent)",
+      "responses": {
+        "carrier": {
+          "summary": "An HBA1 carrier-type result may reflect alpha-thalassemia carrier status depending on the report details (often involves deletions/copy-number).",
+          "next_steps": [
+            {
+              "title": "Review with a clinician",
+              "description": "Alpha-thalassemia interpretation may involve blood indices and copy-number details",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "An HBA1 finding may indicate carrier status or other report-specific information. Interpretation depends on the exact variant type and whether one or more copies are affected.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Clarify the report’s copy/variant details and implications",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in HBA1 is inconclusive and should not be treated as a confirmed carrier or disease result."
+        }
+      }
+    },
+    "HBA2": {
+      "full_name": "Hemoglobin Subunit Alpha 2",
+      "description": "HBA2 contributes to hemoglobin. Some variants can be associated with alpha-thalassemia depending on the type and number of affected copies.",
+      "associated_conditions": ["Alpha-thalassemia spectrum (recessive / copy-number dependent)"],
+      "inheritance": "Autosomal recessive (copy-number dependent)",
+      "responses": {
+        "carrier": {
+          "summary": "An HBA2 carrier-type result may reflect alpha-thalassemia carrier status depending on the report details (often involves deletions/copy-number).",
+          "next_steps": [
+            {
+              "title": "Review with a clinician",
+              "description": "Interpretation may involve blood indices and copy-number details",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "An HBA2 finding may indicate carrier status or other report-specific information. Interpretation depends on the exact variant type and number of affected copies.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Clarify the report’s details and implications",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in HBA2 is inconclusive and should not be treated as a confirmed carrier or disease result."
+        }
+      }
+    },
+    "PAH": {
+      "full_name": "Phenylalanine Hydroxylase",
+      "description": "PAH is associated with phenylketonuria (PKU) when certain pathogenic variants affect both copies.",
+      "associated_conditions": ["Phenylketonuria (PKU) (recessive)"],
+      "inheritance": "Autosomal recessive",
+      "responses": {
+        "carrier": {
+          "summary": "A PAH carrier result usually means one copy of a pathogenic/likely pathogenic variant was found. Carriers typically do not have PKU, but carrier status can matter for family planning.",
+          "next_steps": [
+            {
+              "title": "Consider partner testing (if relevant)",
+              "description": "Discuss carrier screening if planning a family",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "A PAH finding may indicate carrier status or (less commonly) a two-copy result depending on the report. Interpretation depends on the exact variants and copy count.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Clarify whether this is carrier status vs a two-copy finding",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in PAH is inconclusive and should not be treated as a confirmed carrier or disease result."
+        }
+      }
+    },
+    "GALT": {
+      "full_name": "Galactose-1-Phosphate Uridylyltransferase",
+      "description": "GALT is associated with classic galactosemia when certain pathogenic variants affect both copies.",
+      "associated_conditions": ["Galactosemia (recessive)"],
+      "inheritance": "Autosomal recessive",
+      "responses": {
+        "carrier": {
+          "summary": "A GALT carrier result usually means one copy of a pathogenic/likely pathogenic variant was found. Carriers typically do not have classic galactosemia, but carrier status can matter for family planning.",
+          "next_steps": [
+            {
+              "title": "Consider partner testing (if relevant)",
+              "description": "Discuss carrier screening options if planning a family",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "A GALT finding may indicate carrier status or (less commonly) a two-copy result depending on the report. Interpretation depends on the report details.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Clarify whether this is carrier status vs a two-copy finding",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in GALT is inconclusive and should not be treated as a confirmed carrier or disease result."
+        }
+      }
+    },
+    "HEXA": {
+      "full_name": "Hexosaminidase A Alpha Subunit",
+      "description": "HEXA is associated with Tay-Sachs disease when certain pathogenic variants affect both copies.",
+      "associated_conditions": ["Tay-Sachs disease (recessive)"],
+      "inheritance": "Autosomal recessive",
+      "responses": {
+        "carrier": {
+          "summary": "A HEXA carrier result usually means one copy of a pathogenic/likely pathogenic variant was found. Carriers typically do not have Tay-Sachs disease, but carrier status can matter for family planning.",
+          "next_steps": [
+            {
+              "title": "Consider partner testing (if relevant)",
+              "description": "Carrier status is mainly relevant for reproductive planning",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "A HEXA finding may indicate carrier status or (less commonly) a two-copy result depending on the report. Interpretation depends on the exact variants and copy count.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Clarify whether this is carrier status vs a two-copy finding",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in HEXA is inconclusive and should not be treated as a confirmed carrier or disease result."
+        }
+      }
+    },
+    "CYP21A2": {
+      "full_name": "Cytochrome P450 Family 21 Subfamily A Member 2",
+      "description": "CYP21A2 is associated with congenital adrenal hyperplasia (CAH) when certain pathogenic variants affect both copies.",
+      "associated_conditions": ["Congenital adrenal hyperplasia (CAH) (recessive)"],
+      "inheritance": "Autosomal recessive",
+      "responses": {
+        "carrier": {
+          "summary": "A CYP21A2 carrier result usually means one copy of a pathogenic/likely pathogenic variant was found. Carrier status is mainly relevant for family planning.",
+          "next_steps": [
+            {
+              "title": "Consider partner testing (if relevant)",
+              "description": "Discuss carrier screening options if planning a family",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "A CYP21A2 finding may indicate carrier status or (less commonly) a two-copy result depending on the report. Interpretation depends on the report details.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Clarify whether this is carrier status vs a two-copy finding",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in CYP21A2 is inconclusive and should not be treated as a confirmed carrier or disease result."
+        }
+      }
+    },
+    "GJB2": {
+      "full_name": "Gap Junction Protein Beta 2",
+      "description": "GJB2 is associated with inherited hearing loss in some contexts, often in a recessive pattern depending on the specific variants.",
+      "associated_conditions": ["Inherited hearing loss (often recessive)"],
+      "inheritance": "Autosomal recessive (common pattern; depends on variant)",
+      "responses": {
+        "carrier": {
+          "summary": "A GJB2 carrier result usually means one copy of a pathogenic/likely pathogenic variant was found. Carrier status is mainly relevant for family planning.",
+          "next_steps": [
+            {
+              "title": "Consider partner testing (if relevant)",
+              "description": "Discuss carrier screening if planning a family",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "A GJB2 finding may indicate carrier status or (less commonly) a two-copy result depending on the report. Interpretation depends on the exact variants and context.",
+          "next_steps": [
+            {
+              "title": "Discuss with a professional",
+              "description": "Clarify whether this result indicates carrier status vs a two-copy finding",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in GJB2 is inconclusive and should not be treated as a confirmed carrier or diagnosis."
+        }
+      }
+    },
+    "SERPINA1": {
+      "full_name": "Serpin Family A Member 1",
+      "description": "SERPINA1 is associated with alpha-1 antitrypsin deficiency in some contexts. Interpretation depends on the specific variant combination and clinical context.",
+      "associated_conditions": ["Alpha-1 antitrypsin deficiency (context-dependent)"],
+      "inheritance": "Often described as autosomal codominant/recessive-like (context-dependent)",
+      "responses": {
+        "carrier": {
+          "summary": "A SERPINA1 carrier-type result may indicate one copy of a variant associated with alpha-1 antitrypsin deficiency. Many carriers have no symptoms, and interpretation can depend on lab tests and variant type.",
+          "next_steps": [
+            {
+              "title": "Discuss with a clinician if concerned",
+              "description": "A clinician may consider relevant lab testing depending on the specific result and symptoms",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "A SERPINA1 finding may indicate carrier status or another report-specific result. Interpretation depends on the exact variant(s) and clinical context.",
+          "next_steps": [
+            {
+              "title": "Discuss with a clinician",
+              "description": "Clarify what this specific SERPINA1 result means in your situation",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in SERPINA1 is inconclusive and should not be treated as a confirmed carrier or diagnosis."
+        }
+      }
+    },
+    "FMR1": {
+      "full_name": "Fragile X Mental Retardation 1",
+      "description": "FMR1 involves repeat expansions rather than typical single-letter variants. Reports may describe premutation/carrier-style results with specific counseling implications.",
+      "associated_conditions": ["Fragile X spectrum (repeat expansion context)"],
+      "inheritance": "X-linked (repeat expansion context)",
+      "responses": {
+        "carrier": {
+          "summary": "An FMR1 carrier/premutation-type result can have specific reproductive and family implications and should be reviewed with a genetics professional. Interpretation depends on the exact repeat size category reported.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss what repeat category was reported and what it means for you and your family",
+              "urgency": "important"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "An FMR1 finding often requires specialist interpretation because it may involve repeat expansion categories. A genetics professional can explain the report’s exact terminology.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Review repeat size category and implications",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "If your report uses uncertain terminology for FMR1, review it with a genetics professional; interpretation depends on repeat size categories."
+        }
+      }
+    },
+    "DMD": {
+      "full_name": "Dystrophin",
+      "description": "DMD is associated with Duchenne/Becker muscular dystrophy in some contexts. Many reports describe carrier status and X-linked inheritance considerations.",
+      "associated_conditions": ["Duchenne/Becker muscular dystrophy spectrum (X-linked)"],
+      "inheritance": "X-linked",
+      "responses": {
+        "carrier": {
+          "summary": "A DMD carrier-type result can have family planning implications and should be reviewed with a genetics professional. Interpretation depends on the exact variant and the report’s context.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Discuss implications for family members and whether confirmatory testing is recommended",
+              "urgency": "important"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "A DMD finding may indicate carrier status or another report-specific result. Because this is X-linked, family implications can be important to discuss with a professional.",
+          "next_steps": [
+            {
+              "title": "Genetic Counseling",
+              "description": "Clarify whether this is carrier status and what follow-up is appropriate",
+              "urgency": "important"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in DMD is inconclusive and should not be treated as a confirmed diagnosis or carrier result."
+        }
+      }
+    },
+    "G6PD": {
+      "full_name": "Glucose-6-Phosphate Dehydrogenase",
+      "description": "G6PD variants can be associated with G6PD deficiency in some contexts. Interpretation depends on the exact variant and clinical context; this is commonly X-linked.",
+      "associated_conditions": ["G6PD deficiency (X-linked)"],
+      "inheritance": "X-linked",
+      "responses": {
+        "carrier": {
+          "summary": "A G6PD carrier-type result may be reported depending on sex and variant context. Clinical relevance can depend on symptoms, triggers, and lab testing.",
+          "next_steps": [
+            {
+              "title": "Discuss with a clinician if relevant",
+              "description": "If you have symptoms or specific medication/food concerns, discuss confirmatory testing and guidance",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "A G6PD finding may be clinically relevant in some contexts and should be interpreted with professional guidance and (if needed) confirmatory lab testing.",
+          "next_steps": [
+            {
+              "title": "Consider confirmatory testing",
+              "description": "A clinician can advise on lab testing and practical precautions, if relevant",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in G6PD is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+    "MEFV": {
+      "full_name": "MEFV Innate Immunity Regulator",
+      "description": "MEFV is associated with familial Mediterranean fever in some contexts. Interpretation can vary by variant and clinical context.",
+      "associated_conditions": ["Familial Mediterranean fever (FMF) (context-dependent)"],
+      "inheritance": "Often autosomal recessive (context-dependent)",
+      "responses": {
+        "carrier": {
+          "summary": "An MEFV carrier-type result may be reported. Interpretation can be complex and often depends on symptoms and the specific variants.",
+          "next_steps": [
+            {
+              "title": "Discuss with a clinician if symptomatic",
+              "description": "If you have relevant symptoms, discuss whether this result is meaningful and what follow-up is appropriate",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "pathogenic": {
+          "summary": "An MEFV finding may be relevant in some contexts, but interpretation depends on the exact variants, whether one or both copies are affected, and clinical symptoms.",
+          "next_steps": [
+            {
+              "title": "Clinical review",
+              "description": "Discuss the report details and your symptoms (if any) with a clinician",
+              "urgency": "routine"
+            }
+          ]
+        },
+        "vus": {
+          "summary": "A VUS in MEFV is inconclusive and should not be treated as a confirmed diagnosis."
+        }
+      }
+    },
+
+    "HNF1A": {
+      "full_name": "Hepatocyte Nuclear Factor 1 Alpha",
+      "description": "HNF1A is involved in regulating insulin and glucose metabolism. Some pathogenic variants can be associated with monogenic (single-gene) diabetes (MODY) in specific contexts.",
+      "associated_conditions": ["Monogenic diabetes (MODY) (context-dependent)"],
+      "inheritance": "Often autosomal dominant (context-dependent)",
+      "important_context": "Many consumer DNA tests do not diagnose diabetes. Interpretation depends on the exact variant, family history, and clinical testing.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions HNF1A. This gene is sometimes discussed in the context of glucose regulation and (in specific situations) monogenic diabetes. Most people will not be able to interpret this from a gene mention alone without exact variant details and clinical context.",
+          "what_this_means": [
+            "A gene mention is not the same as a diagnosis",
+            "If a report includes a specific variant and a classification, that provides more context",
+            "Clinical testing (blood glucose/HbA1c) is what determines diabetes status"
+          ],
+          "what_this_does_not_mean": [
+            "This does NOT mean you have diabetes",
+            "This does NOT mean you will develop diabetes",
+            "You should not change medications based on this alone"
+          ],
+          "next_steps": [
+            {
+              "title": "Look for variant details",
+              "description": "If possible, find the exact variant (rsID/HGVS) and any classification in your report",
+              "urgency": "informational"
+            },
+            {
+              "title": "Discuss with a clinician if you have concerns",
+              "description": "If you have symptoms or strong family history of early-onset diabetes, discuss appropriate clinical testing",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "GCK": {
+      "full_name": "Glucokinase",
+      "description": "GCK plays a role in glucose sensing. Some pathogenic variants can be associated with monogenic diabetes (MODY) in specific contexts.",
+      "associated_conditions": ["Monogenic diabetes (MODY) (context-dependent)"],
+      "inheritance": "Often autosomal dominant (context-dependent)",
+      "important_context": "A gene mention alone cannot determine diagnosis. Clinical context and exact variant details matter.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions GCK. This gene is sometimes discussed in the context of glucose regulation. A gene mention alone is not enough to interpret health impact without exact variant details and clinical context.",
+          "what_this_does_not_mean": [
+            "This does NOT mean you have diabetes",
+            "This does NOT tell you your blood sugar status"
+          ],
+          "next_steps": [
+            {
+              "title": "Find the exact variant (if present)",
+              "description": "Look for rsID/HGVS and any classification in your report",
+              "urgency": "informational"
+            }
+          ]
+        }
+      }
+    },
+    "GCKR": {
+      "full_name": "Glucokinase Regulator",
+      "description": "GCKR influences glucose and lipid metabolism. Many findings in this gene are common population variants discussed as risk factors in research contexts.",
+      "associated_conditions": ["Metabolic traits (risk-factor context)"],
+      "inheritance": "Complex / multifactorial",
+      "important_context": "Most common GCKR findings in consumer reports are risk-factor style results, not diagnoses.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions GCKR. Many consumer reports include GCKR as part of metabolic trait panels. These are typically risk-factor style findings and are not diagnostic on their own.",
+          "what_this_means": [
+            "A gene mention or common variant is usually not medically actionable by itself",
+            "Lifestyle and other non-genetic factors often matter more than single common variants"
+          ],
+          "what_this_does_not_mean": [
+            "This does NOT diagnose diabetes, fatty liver disease, or any condition",
+            "This does NOT replace clinical lab testing"
+          ],
+          "next_steps": [
+            {
+              "title": "Use clinical labs for health decisions",
+              "description": "If you’re concerned about metabolism, discuss standard lab tests (lipids, glucose) with a clinician",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "LEPR": {
+      "full_name": "Leptin Receptor",
+      "description": "LEPR is involved in appetite and energy balance signaling. Some rare variants have been studied in relation to severe early-onset obesity in specific contexts.",
+      "associated_conditions": ["Energy balance / appetite regulation (context-dependent)"],
+      "inheritance": "Context-dependent",
+      "important_context": "Most consumer-report LEPR mentions are not diagnostic. Interpretation depends on variant rarity, clinical history, and family context.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions LEPR. This gene is involved in appetite/energy signaling. A gene mention alone is not enough to interpret health impact without exact variant details and clinical context.",
+          "what_this_does_not_mean": [
+            "This does NOT diagnose an eating disorder or obesity",
+            "You should not make medical decisions based on this alone"
+          ],
+          "next_steps": [
+            {
+              "title": "Look for exact variant details",
+              "description": "If the report lists a specific rare variant and classification, that provides more context",
+              "urgency": "informational"
+            }
+          ]
+        }
+      }
+    },
+    "MC4R": {
+      "full_name": "Melanocortin 4 Receptor",
+      "description": "MC4R is involved in appetite regulation. Rare variants have been studied in relation to weight regulation in specific contexts.",
+      "associated_conditions": ["Weight regulation (context-dependent)"],
+      "inheritance": "Context-dependent",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions MC4R. This gene is sometimes discussed in weight regulation research. A gene mention alone is not diagnostic without exact variant details and clinical context.",
+          "what_this_does_not_mean": [
+            "This does NOT explain all weight changes",
+            "This does NOT replace clinical evaluation"
+          ],
+          "next_steps": [
+            {
+              "title": "Use clinical context",
+              "description": "If you have medical concerns, discuss them with a clinician rather than relying on single-gene mentions",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "FTO": {
+      "full_name": "FTO Alpha-Ketoglutarate Dependent Dioxygenase",
+      "description": "FTO is commonly discussed in research on body weight and metabolism as a risk-factor gene. Many FTO variants are common in the population.",
+      "associated_conditions": ["Metabolic traits (risk-factor context)"],
+      "inheritance": "Complex / multifactorial",
+      "important_context": "FTO is a risk-factor gene in many studies, not a deterministic gene. Most people with common FTO variants do not have a defined genetic disorder.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions FTO. Many consumer reports include FTO as a research-linked risk factor for metabolic traits. This is typically not medically actionable by itself.",
+          "what_this_does_not_mean": [
+            "This does NOT diagnose obesity or any medical condition",
+            "This does NOT predict your future health outcomes"
+          ],
+          "next_steps": [
+            {
+              "title": "Focus on clinical measures",
+              "description": "Use standard health measures and clinician guidance for decisions (not single-gene risk factors)",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "TCF7L2": {
+      "full_name": "Transcription Factor 7 Like 2",
+      "description": "TCF7L2 is commonly discussed in research on type 2 diabetes risk as a risk-factor gene. Many variants are common in the population.",
+      "associated_conditions": ["Type 2 diabetes risk-factor context"],
+      "inheritance": "Complex / multifactorial",
+      "important_context": "Most common TCF7L2 findings in consumer reports are risk-factor style results and are not diagnostic.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions TCF7L2. This gene is often discussed as a research-linked risk factor for type 2 diabetes. A gene mention alone is not diagnostic and should not be used to make medical decisions.",
+          "what_this_does_not_mean": [
+            "This does NOT mean you have diabetes",
+            "This does NOT replace blood tests like fasting glucose or HbA1c"
+          ],
+          "next_steps": [
+            {
+              "title": "Use clinical testing if concerned",
+              "description": "If you’re worried about diabetes, discuss standard screening tests with a clinician",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+
+    "CYP2D6": {
+      "full_name": "Cytochrome P450 2D6",
+      "description": "CYP2D6 is a medication-metabolizing gene. Different CYP2D6 variants can affect how some people process certain medications.",
+      "associated_conditions": ["Medication response (pharmacogenomics)"],
+      "inheritance": "Complex (many variants; sometimes copy-number involved)",
+      "important_context": "Do NOT change medications based on a consumer report. Medication decisions require a clinician and (often) a clinical-grade pharmacogenomics test.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions CYP2D6, a gene that can affect how some medications are processed. The practical meaning depends on the exact CYP2D6 result format (often reported as star alleles like *1/*4 or as metabolizer status).",
+          "what_this_means": [
+            "Some people process certain drugs faster or slower due to CYP2D6 differences",
+            "Reports may describe a metabolizer status (poor/intermediate/normal/ultrarapid)"
+          ],
+          "what_this_does_not_mean": [
+            "This does NOT mean a medication is unsafe for you",
+            "This does NOT tell you what dose you should take",
+            "Do NOT stop or start medications based on this alone"
+          ],
+          "next_steps": [
+            {
+              "title": "Confirm with a professional if you plan to use it clinically",
+              "description": "If a medication decision depends on CYP2D6, ask your clinician/pharmacist whether confirmatory pharmacogenomics testing is appropriate",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "CYP2C19": {
+      "full_name": "Cytochrome P450 2C19",
+      "description": "CYP2C19 is a medication-metabolizing gene that can influence how some medications are processed.",
+      "associated_conditions": ["Medication response (pharmacogenomics)"],
+      "inheritance": "Complex (many variants)",
+      "important_context": "Medication decisions should be made with a licensed clinician/pharmacist. Consumer reports are not a substitute for clinical pharmacogenomics.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions CYP2C19. Some medications are affected by CYP2C19 metabolism differences. Meaning depends on the exact reported genotype/star alleles or metabolizer status.",
+          "what_this_does_not_mean": [
+            "This does NOT mean you should change any medication",
+            "This does NOT replace clinical evaluation"
+          ],
+          "next_steps": [
+            {
+              "title": "Discuss with your clinician/pharmacist (if relevant)",
+              "description": "If you’re taking a medication known to be influenced by CYP2C19, ask whether pharmacogenomics guidance applies to you",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "CYP2C9": {
+      "full_name": "Cytochrome P450 2C9",
+      "description": "CYP2C9 is a medication-metabolizing gene that can influence processing of some drugs.",
+      "associated_conditions": ["Medication response (pharmacogenomics)"],
+      "inheritance": "Complex (many variants)",
+      "important_context": "Do not adjust medications based on this alone. Clinical context and confirmatory testing may be needed.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions CYP2C9. Variants in this gene can influence how some medications are metabolized. The practical meaning depends on the exact genotype and the specific medication involved.",
+          "next_steps": [
+            {
+              "title": "Use clinician guidance",
+              "description": "If a medication has pharmacogenomic guidance involving CYP2C9, discuss it with a clinician/pharmacist",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "VKORC1": {
+      "full_name": "Vitamin K Epoxide Reductase Complex Subunit 1",
+      "description": "VKORC1 is a gene that can influence response to some anticoagulant medications in certain contexts.",
+      "associated_conditions": ["Medication response (pharmacogenomics)"],
+      "inheritance": "Complex",
+      "important_context": "Anticoagulant medications require careful medical supervision. Do not change therapy based on consumer genetic information.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions VKORC1, a gene that may influence response to certain anticoagulants in some contexts. Interpretation depends on the exact variant information and the clinical situation.",
+          "what_this_does_not_mean": [
+            "This does NOT tell you whether you need anticoagulants",
+            "This does NOT tell you a safe dose"
+          ],
+          "next_steps": [
+            {
+              "title": "Discuss with a clinician if relevant",
+              "description": "If anticoagulant therapy is being considered, ask whether clinical pharmacogenomics testing is appropriate",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "SLCO1B1": {
+      "full_name": "Solute Carrier Organic Anion Transporter Family Member 1B1",
+      "description": "SLCO1B1 can influence transport of certain medications in the body and is commonly discussed in pharmacogenomics contexts.",
+      "associated_conditions": ["Medication response (pharmacogenomics)"],
+      "inheritance": "Complex",
+      "important_context": "Medication side effects depend on many factors. Do not stop medications based on this alone.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions SLCO1B1. This gene is sometimes used in pharmacogenomics to guide medication choice or monitoring in specific situations. Meaning depends on the exact variant and the medication involved.",
+          "next_steps": [
+            {
+              "title": "Discuss with your clinician/pharmacist if concerned",
+              "description": "If you have medication side effects or questions, discuss them with a clinician rather than relying on a gene mention alone",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "DPYD": {
+      "full_name": "Dihydropyrimidine Dehydrogenase",
+      "description": "DPYD can influence metabolism of certain chemotherapy drugs in specific clinical contexts.",
+      "associated_conditions": ["Medication response (pharmacogenomics)"],
+      "inheritance": "Complex",
+      "important_context": "This is a clinical pharmacogenomics gene. Decisions about chemotherapy must be made by oncology teams using validated testing and clinical context.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions DPYD. This gene is clinically relevant for specific medications in oncology settings. A consumer report is not enough to guide treatment decisions.",
+          "next_steps": [
+            {
+              "title": "If relevant, confirm clinically",
+              "description": "If you are under oncology care and DPYD is relevant, ask your oncology team about validated pharmacogenomics testing",
+              "urgency": "important"
+            }
+          ]
+        }
+      }
+    },
+    "TPMT": {
+      "full_name": "Thiopurine S-Methyltransferase",
+      "description": "TPMT can influence metabolism of certain medications in specific clinical contexts.",
+      "associated_conditions": ["Medication response (pharmacogenomics)"],
+      "inheritance": "Complex",
+      "important_context": "Medication decisions should be made by clinicians using validated tests and clinical context.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions TPMT. This gene is used in pharmacogenomics for specific medications. The meaning depends on the exact genotype and medication context.",
+          "next_steps": [
+            {
+              "title": "Use clinical guidance if relevant",
+              "description": "If you are prescribed a medication impacted by TPMT, ask your clinician about validated testing and monitoring",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "UGT1A1": {
+      "full_name": "UDP Glucuronosyltransferase Family 1 Member A1",
+      "description": "UGT1A1 can influence processing of certain substances in the body and is sometimes included in pharmacogenomics contexts.",
+      "associated_conditions": ["Medication response (pharmacogenomics) / bilirubin metabolism context"],
+      "inheritance": "Complex",
+      "important_context": "Do not change medications based on this alone. Interpretation depends on the exact variant and clinical context.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions UGT1A1. Some variants are common and can be relevant in specific medication or lab contexts. A gene mention alone is not enough to guide medical decisions.",
+          "next_steps": [
+            {
+              "title": "Discuss with a clinician if you have a specific medication question",
+              "description": "If a medication you use has guidance involving UGT1A1, ask a clinician/pharmacist about validated testing and monitoring",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    },
+    "CYP3A5": {
+      "full_name": "Cytochrome P450 3A5",
+      "description": "CYP3A5 can influence metabolism of some medications in certain contexts.",
+      "associated_conditions": ["Medication response (pharmacogenomics)"],
+      "inheritance": "Complex",
+      "important_context": "Do not adjust medications based on a consumer report. Use clinician guidance and validated testing when relevant.",
+      "responses": {
+        "general": {
+          "summary": "Your report mentions CYP3A5. Some medications may have guidance related to CYP3A5 in certain contexts. Interpretation depends on the exact genotype and the medication involved.",
+          "next_steps": [
+            {
+              "title": "Use clinician guidance",
+              "description": "If you have a specific medication question, ask a clinician/pharmacist whether pharmacogenomics applies",
+              "urgency": "routine"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "common_classifications": {
+    "Pathogenic": {
+      "standard_response": {
+        "summary": "A “Pathogenic” classification generally means a variant has strong evidence of being disease-associated. This is important, but it is NOT a diagnosis and does NOT guarantee you will develop a condition.",
+        "key_points": [
+          "Not a diagnosis; it is a genetic risk finding",
+          "Individual outcomes vary (family history and other factors matter)",
+          "Medical decisions should be made with a qualified professional"
+        ],
+        "recommendation": "Discuss the result with a licensed healthcare provider or certified genetic counselor, including whether confirmatory testing is needed and what screening guidance applies to you."
+      }
+    },
+    "Likely Pathogenic": {
+      "standard_response": {
+        "summary": "A “Likely Pathogenic” classification means the variant probably has clinical significance, but there is a small chance it could be reclassified as more evidence becomes available.",
+        "key_points": [
+          "Often managed similarly to pathogenic variants",
+          "Not a diagnosis and not a certainty of disease",
+          "Interpretation should include family/personal history"
+        ],
+        "recommendation": "Review with a genetic counselor who can explain evidence strength and what follow-up is appropriate."
+      }
+    },
+    "Benign": {
+      "standard_response": {
+        "summary": "A “Benign” classification means the variant is considered harmless and not associated with disease risk.",
+        "key_points": [
+          "Normal human variation",
+          "No clinical action is typically needed"
+        ]
+      }
+    },
+    "Likely Benign": {
+      "standard_response": {
+        "summary": "A “Likely Benign” classification means the variant is probably harmless and usually treated the same as benign.",
+        "key_points": [
+          "Typically no clinical action is recommended",
+          "May be reclassified over time, but usually remains non-actionable"
+        ]
+      }
+    }
+  }
+}
+

@@ -230,7 +230,7 @@ function redactPII(inputText: string): RedactionResult {
 // ============================================================================
 
 interface ReportInputProps {
-  onSubmit: (text: string) => Promise<void>;
+  onSubmit: (text: string, mode?: "auto" | "prebuilt_only") => Promise<void>;
   isLoading?: boolean;
 }
 
@@ -242,6 +242,8 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
   const [redactionInfo, setRedactionInfo] = useState<{ count: number; types: string[] } | null>(null);
   const [filterInfo, setFilterInfo] = useState<FilterResult | null>(null);
   const [autoFilterEnabled, setAutoFilterEnabled] = useState(true); // Default ON
+  const [analysisMode, setAnalysisMode] = useState<"auto" | "prebuilt_only">("auto");
+  const showModeSwitch = process.env.NODE_ENV !== "production";
 
   const handleSubmit = async () => {
     if (!text.trim()) {
@@ -255,7 +257,7 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
     }
 
     setError(null);
-    await onSubmit(text);
+    await onSubmit(text, analysisMode);
   };
 
   const handleTextChange = (value: string) => {
@@ -360,6 +362,39 @@ export function ReportInput({ onSubmit, isLoading = false }: ReportInputProps) {
           </TabsList>
 
           <TabsContent value="paste" className="space-y-4 mt-4">
+            {showModeSwitch && (
+              <div className="flex items-center justify-between p-3 bg-muted/50 rounded-lg">
+                <div className="flex items-center gap-2">
+                  <Dna className="h-4 w-4 text-primary" />
+                  <div>
+                    <p className="text-sm font-medium">Mode</p>
+                    <p className="text-xs text-muted-foreground">
+                      Auto can use the LLM when needed. Prebuilt-only never calls external AI.
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-xs text-muted-foreground">Auto</span>
+                  <button
+                    type="button"
+                    role="switch"
+                    aria-checked={analysisMode === "prebuilt_only"}
+                    onClick={() => setAnalysisMode(analysisMode === "prebuilt_only" ? "auto" : "prebuilt_only")}
+                    className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
+                      analysisMode === "prebuilt_only" ? "bg-primary" : "bg-muted-foreground/30"
+                    }`}
+                  >
+                    <span
+                      className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
+                        analysisMode === "prebuilt_only" ? "translate-x-6" : "translate-x-1"
+                      }`}
+                    />
+                  </button>
+                  <span className="text-xs text-muted-foreground">$0</span>
+                </div>
+              </div>
+            )}
+
             <div className="space-y-2">
               <Textarea
                 placeholder="Paste your genetic report text here...

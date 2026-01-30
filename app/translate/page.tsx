@@ -13,7 +13,7 @@ export default function TranslatePage() {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = async (text: string) => {
+  const handleSubmit = async (text: string, mode?: "auto" | "prebuilt_only") => {
     setIsLoading(true);
     setError(null);
     setResult(null);
@@ -24,7 +24,7 @@ export default function TranslatePage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ text }),
+        body: JSON.stringify({ text, mode }),
       });
 
       const data = await response.json();

@@ -9,9 +9,15 @@ MyDNA Explainer is a privacy-first web application that helps users understand t
 ## Features
 
 - **Report Translation**: Paste genetic test report text and get plain-language explanations
+- **Prebuilt Knowledge (Low/No Cost)**: Many common genes and result patterns return instant educational responses (no LLM call)
+- **Prebuilt-only ($0) Mode**: Optional mode that never calls an external LLM (good for public demos / strict privacy)
 - **Variant Lookup**: Look up specific genetic variants in ClinVar
 - **Glossary**: Comprehensive explanations of genetic terminology (VUS, pathogenic, penetrance, etc.)
 - **Next Steps Guidance**: Suggested questions and checklists for healthcare provider appointments
+- **PDF/Text Upload + OCR (Client-side)**: Extract text from PDFs (server-side) and images (client-side OCR)
+- **Client-side PII Redaction**: Helps remove common identifiers before submitting text
+- **Keep Only Genetics**: Filters out lifestyle/marketing content from long consumer reports
+- **Suggested Reading (PubMed)**: Optional “find papers” list based on detected gene/topic keywords (not full report text)
 - **Privacy-First**: No data storage, no accounts, process in-memory only
 
 ## Tech Stack
@@ -20,7 +26,7 @@ MyDNA Explainer is a privacy-first web application that helps users understand t
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS + shadcn/ui
 - **LLM**: Configurable (DeepSeek recommended, also supports OpenAI and Anthropic)
-- **External API**: NCBI ClinVar E-utilities
+- **External APIs**: NCBI ClinVar E-utilities + PubMed (E-utilities)
 
 ## Getting Started
 
@@ -28,7 +34,8 @@ MyDNA Explainer is a privacy-first web application that helps users understand t
 
 - Node.js 18+ 
 - npm or yarn
-- API key for OpenAI or Anthropic
+- Optional LLM API key (DeepSeek/OpenAI/Anthropic) if you want “Auto” mode to use an LLM
+- Optional NCBI API key (free) for higher NCBI rate limits
 
 ### Installation
 
@@ -53,6 +60,7 @@ MyDNA Explainer is a privacy-first web application that helps users understand t
    LLM_PROVIDER=deepseek        # recommended (also: "openai" or "anthropic")
    LLM_API_KEY=your_api_key_here
    NCBI_API_KEY=                # optional, for higher rate limits
+   # PREBUILT_ONLY_MODE=true    # optional: strict $0 mode (no external LLM)
    ```
 
 5. Run the development server:
@@ -66,11 +74,17 @@ MyDNA Explainer is a privacy-first web application that helps users understand t
 
 | Variable | Required | Description |
 |----------|----------|-------------|
-| `LLM_PROVIDER` | Yes | `deepseek` (recommended), `openai`, or `anthropic` |
-| `LLM_API_KEY` | Yes | Your LLM provider API key |
+| `LLM_PROVIDER` | No* | `deepseek` (recommended), `openai`, or `anthropic` |
+| `LLM_API_KEY` | No* | Your LLM provider API key |
 | `LLM_MODEL` | No | Override default model (see below) |
 | `LLM_BASE_URL` | No | Custom API endpoint (auto-configured for each provider) |
-| `NCBI_API_KEY` | No | NCBI API key for higher ClinVar rate limits |
+| `NCBI_API_KEY` | No | NCBI API key for higher ClinVar/PubMed rate limits |
+| `PREBUILT_ONLY_MODE` | No | If `true`, never call an external LLM (prebuilt + KB only) |
+| `ALLOW_CLIENT_MODE_SWITCH` | No | If `true` (or in non-production), allow per-request mode override (`auto` vs `prebuilt_only`) |
+| `RATE_LIMIT_TRANSLATE_PER_MIN` | No | Per-IP rate limit for `/api/translate` (default: 10/min) |
+| `RATE_LIMIT_LITERATURE_PER_MIN` | No | Per-IP rate limit for `/api/literature` (default: 30/min) |
+
+\*If `PREBUILT_ONLY_MODE=true`, the app can run without `LLM_PROVIDER` / `LLM_API_KEY`. In “Auto” mode, an LLM key is required when no prebuilt match exists.
 
 ### LLM Provider Comparison
 
@@ -90,8 +104,11 @@ mydna-explainer/
 │   ├── api/               # API routes
 │   │   ├── translate/     # Report translation endpoint
 │   │   └── clinvar/       # ClinVar lookup endpoint
+│   │   ├── literature/    # PubMed suggested reading endpoint
+│   │   └── extract-text/  # PDF/TXT extraction endpoint
 │   ├── translate/         # Report translator page
 │   ├── lookup/            # Variant lookup page
+│   ├── kb/                # KB pages (templates + explainers)
 │   ├── privacy/           # Privacy policy page
 │   └── disclaimer/        # Disclaimer page
 ├── components/            # React components
@@ -146,9 +163,14 @@ Translates genetic report text into structured educational content.
 **Request:**
 ```json
 {
-  "text": "Your genetic report text here..."
+  "text": "Your genetic report text here...",
+  "mode": "auto"
 }
 ```
+
+`mode` is optional:
+- `auto` (default): uses prebuilt first, then LLM if needed
+- `prebuilt_only`: never calls external LLMs (best for $0 / strict privacy)
 
 **Response:**
 ```json
@@ -164,6 +186,23 @@ Translates genetic report text into structured educational content.
   "refusals": [...]
 }
 ```
+
+### POST /api/literature
+
+Returns a small list of suggested PubMed reading based on gene/topic keywords (does **not** send full report text).
+
+**Request:**
+```json
+{
+  "genes": ["BRCA1"],
+  "topics": ["hereditary cancer"],
+  "max_results": 5
+}
+```
+
+### POST /api/extract-text
+
+Extracts text from uploaded PDF or TXT files. Responses are `Cache-Control: no-store`.
 
 ### GET /api/clinvar
 

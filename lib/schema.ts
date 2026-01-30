@@ -10,6 +10,8 @@ export const translateRequestSchema = z.object({
   text: z.string()
     .min(10, 'Report text must be at least 10 characters')
     .max(50000, 'Report text must not exceed 50,000 characters'),
+  // Optional: allow client to request prebuilt-only mode (UI toggle in dev).
+  mode: z.enum(['auto', 'prebuilt_only']).optional(),
 });
 
 export type TranslateRequest = z.infer<typeof translateRequestSchema>;
@@ -22,6 +24,15 @@ export const clinvarRequestSchema = z.object({
 });
 
 export type ClinvarRequest = z.infer<typeof clinvarRequestSchema>;
+
+// Literature search request (PubMed / Europe PMC)
+export const literatureRequestSchema = z.object({
+  genes: z.array(z.string().min(2).max(20)).min(1).max(3),
+  topics: z.array(z.string().min(2).max(80)).max(3).optional(),
+  max_results: z.number().int().min(1).max(10).optional(),
+});
+
+export type LiteratureRequest = z.infer<typeof literatureRequestSchema>;
 
 // ============================================================================
 // Entity Schemas (extracted from reports)
@@ -90,6 +101,30 @@ export const sourceSchema = z.object({
 });
 
 export type Source = z.infer<typeof sourceSchema>;
+
+// ============================================================================
+// Literature Response Schemas
+// ============================================================================
+
+export const literatureArticleSchema = z.object({
+  title: z.string(),
+  pmid: z.string().optional(),
+  journal: z.string().optional(),
+  year: z.string().optional(),
+  authors: z.string().optional(),
+  url: z.string().url(),
+  why_relevant: z.string(),
+});
+
+export type LiteratureArticle = z.infer<typeof literatureArticleSchema>;
+
+export const literatureResponseSchema = z.object({
+  query: z.string(),
+  articles: z.array(literatureArticleSchema),
+  disclaimer: z.string(),
+});
+
+export type LiteratureResponse = z.infer<typeof literatureResponseSchema>;
 
 // ============================================================================
 // Refusal Schemas (for handling disallowed requests)
@@ -194,6 +229,10 @@ export function validateTranslateRequest(data: unknown): TranslateRequest {
 
 export function validateClinvarRequest(data: unknown): ClinvarRequest {
   return clinvarRequestSchema.parse(data);
+}
+
+export function validateLiteratureRequest(data: unknown): LiteratureRequest {
+  return literatureRequestSchema.parse(data);
 }
 
 export function validateTranslateResponse(data: unknown): TranslateResponse {

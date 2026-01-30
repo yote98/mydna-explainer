@@ -196,11 +196,14 @@ async function callAnthropic(prompt: string, reportText: string): Promise<string
 // Main Translation Function
 // ============================================================================
 
-export async function translateReport(reportText: string): Promise<TranslateResponse> {
+export async function translateReport(
+  reportText: string,
+  options?: { prebuiltOnly?: boolean }
+): Promise<TranslateResponse> {
   // PHASE 2: First check for pre-built responses (FREE - no API call)
   const prebuiltMatch = findPrebuiltMatch(reportText);
   
-  if (prebuiltMatch && prebuiltMatch.confidence === 'high') {
+  if (prebuiltMatch && (prebuiltMatch.confidence === 'high' || prebuiltMatch.confidence === 'medium')) {
     console.log(`[translate] Using pre-built response for ${prebuiltMatch.gene} (${prebuiltMatch.classification})`);
     try {
       return generatePrebuiltResponse(prebuiltMatch, reportText);
@@ -208,6 +211,66 @@ export async function translateReport(reportText: string): Promise<TranslateResp
       console.log('[translate] Pre-built response failed, falling back to LLM');
       // Fall through to LLM
     }
+  }
+
+  // Optional strict mode: never call an external LLM.
+  // This reduces cost and keeps the app usable even when no LLM key is configured.
+  const envPrebuiltOnly =
+    process.env.PREBUILT_ONLY_MODE === '1' ||
+    process.env.PREBUILT_ONLY_MODE?.toLowerCase() === 'true';
+  const prebuiltOnly = options?.prebuiltOnly ?? envPrebuiltOnly;
+
+  if (prebuiltOnly) {
+    return {
+      disclaimer: getDisclaimer(),
+      extracted_entities: [],
+      summary_plain_english:
+        'Prebuilt-only mode is enabled, so this app will not call an external AI model. ' +
+        'I could not find a matching prebuilt template for the text you provided.\n\n' +
+        'Try one of these:\n' +
+        '- Paste only the “Findings / Results” section\n' +
+        '- Include the gene name (e.g., BRCA1) and a classification (Pathogenic / VUS / Benign)\n' +
+        '- Include a variant identifier (rsID or HGVS), if present\n\n' +
+        'If you want the full AI translation, disable prebuilt-only mode.',
+      glossary: [],
+      what_this_does_not_mean: [
+        'This is NOT a medical interpretation',
+        'This does NOT mean your results are normal or abnormal',
+        'This does NOT replace a clinician or genetic counselor',
+      ],
+      next_steps: [
+        {
+          title: 'Focus the input',
+          rationale: 'Shorter, genetics-only text is more likely to match a prebuilt template.',
+          who_to_talk_to: 'You (editing the pasted text)',
+          urgency: 'informational',
+        },
+        {
+          title: 'Use ClinVar Lookup (if you have an rsID/HGVS)',
+          rationale: 'If your report includes a variant identifier, ClinVar can provide public classification context.',
+          who_to_talk_to: 'ClinVar tool + a healthcare professional for interpretation',
+          urgency: 'routine',
+        },
+      ],
+      questions_to_ask: [
+        'Does my report list a specific variant identifier (rsID or HGVS)?',
+        'What is the reported classification (Pathogenic, VUS, Benign)?',
+        'Should this result be confirmed with clinical testing?',
+      ],
+      sources: [
+        {
+          label: 'ClinVar Database',
+          url: 'https://www.ncbi.nlm.nih.gov/clinvar/',
+          why_relevant: 'Public database for variant classifications and supporting evidence',
+        },
+        {
+          label: 'Questions for a Clinician (template)',
+          url: '/kb/templates/questions-for-clinician',
+          why_relevant: 'Prepare questions for a genetics professional',
+        },
+      ],
+      refusals: [],
+    };
   }
   
   // Fall back to LLM for complex/unknown cases

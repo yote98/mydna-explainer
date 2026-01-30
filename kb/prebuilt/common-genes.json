@@ -11,7 +11,7 @@
         "Pancreatic cancer"
       ],
       "inheritance": "Autosomal dominant",
-      "penetrance": "Up to 72% lifetime risk for breast cancer; up to 44% for ovarian cancer",
+      "penetrance": "Increased lifetime risk (varies by individual and family history)",
       "responses": {
         "pathogenic": {
           "summary": "A pathogenic variant in BRCA1 has been identified. This is a significant finding that indicates an increased lifetime risk for certain cancers, particularly breast and ovarian cancer.",
@@ -125,7 +125,7 @@
         "Melanoma"
       ],
       "inheritance": "Autosomal dominant",
-      "penetrance": "Up to 69% lifetime risk for breast cancer; up to 17% for ovarian cancer",
+      "penetrance": "Increased lifetime risk (varies by individual and family history)",
       "responses": {
         "pathogenic": {
           "summary": "A pathogenic variant in BRCA2 has been identified. This indicates an increased lifetime risk for several cancers, including breast, ovarian, prostate, and pancreatic cancer.",
@@ -190,11 +190,11 @@
         "Age-related cognitive decline"
       ],
       "variants": {
-        "e2/e2": "May be protective against Alzheimer's; associated with type III hyperlipoproteinemia",
-        "e2/e3": "Slightly reduced Alzheimer's risk",
-        "e3/e3": "Most common genotype; average risk",
-        "e3/e4": "Moderately increased Alzheimer's risk (2-3x)",
-        "e4/e4": "Significantly increased Alzheimer's risk (8-12x)"
+        "e2/e2": "Often described as lower genetic risk for late-onset Alzheimer's; can be associated with certain lipid disorders in some contexts",
+        "e2/e3": "Often described as lower genetic risk for late-onset Alzheimer's compared to e3/e3",
+        "e3/e3": "Most common genotype; average population risk baseline",
+        "e3/e4": "Often described as increased genetic risk for late-onset Alzheimer's (risk varies by individual)",
+        "e4/e4": "Often described as higher genetic risk for late-onset Alzheimer's (risk varies by individual)"
       },
       "important_context": "APOE e4 is a RISK FACTOR, not a deterministic gene. Many e4 carriers never develop Alzheimer's, and many Alzheimer's patients don't have e4.",
       "responses": {
