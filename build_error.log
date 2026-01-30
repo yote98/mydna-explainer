@@ -1,0 +1,45 @@
+
+> mydna-explainer@0.1.0 build
+> next build
+
+ ΓÜá Mismatching @next/swc version, detected: 15.5.7 while Next.js is on 15.5.11. Please ensure these match
+   Γû▓ Next.js 15.5.11
+   - Environments: .env.local
+
+   Creating an optimized production build ...
+ ΓÜá Mismatching @next/swc version, detected: 15.5.7 while Next.js is on 15.5.11. Please ensure these match
+ ΓÜá Mismatching @next/swc version, detected: 15.5.7 while Next.js is on 15.5.11. Please ensure these match
+ ΓÜá Mismatching @next/swc version, detected: 15.5.7 while Next.js is on 15.5.11. Please ensure these match
+ Γ£ô Compiled successfully in 2.8s
+   Linting and checking validity of types ...
+
+./components/ReportInput.tsx
+9:10  Warning: 'AlertTriangle' is defined but never used.  @typescript-eslint/no-unused-vars
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+Failed to compile.
+
+./components/workflow-section.tsx:87:43
+Type error: Type '{ hidden: { opacity: number; y: number; }; visible: { opacity: number; y: number; transition: { duration: number; ease: number[]; }; }; }' is not assignable to type 'Variants'.
+  Property 'visible' is incompatible with index signature.
+    Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'Variant'.
+      Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type 'TargetAndTransition'.
+        Type '{ opacity: number; y: number; transition: { duration: number; ease: number[]; }; }' is not assignable to type '{ transition?: Transition<any> | undefined; transitionEnd?: ResolvedValues$1 | undefined; }'.
+          Types of property 'transition' are incompatible.
+            Type '{ duration: number; ease: number[]; }' is not assignable to type 'Transition<any> | undefined'.
+              Type '{ duration: number; ease: number[]; }' is not assignable to type 'TransitionWithValueOverrides<any>'.
+                Type '{ duration: number; ease: number[]; }' is not assignable to type 'ValueAnimationTransition<any>'.
+                  Types of property 'ease' are incompatible.
+                    Type 'number[]' is not assignable to type 'Easing | Easing[] | undefined'.
+                      Type 'number[]' is not assignable to type 'EasingFunction | Easing[]'.
+                        Type 'number[]' is not assignable to type 'Easing[]'.
+                          Type 'number' is not assignable to type 'Easing'.
+
+  85 |         >
+  86 |           {steps.map((step, index) => (
+> 87 |             <motion.div key={step.number} variants={itemVariants} className="relative group">
+     |                                           ^
+  88 |               {/* Step Marker */}
+  89 |               <div className="absolute -top-12 -left-2 mono-number opacity-0 group-hover:opacity-20 transition-opacity duration-500">
+  90 |                 {step.number}
+Next.js build worker exited with code: 1 and signal: null

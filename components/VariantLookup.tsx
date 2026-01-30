@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { 
-  Search, 
-  Loader2, 
-  ExternalLink, 
+import {
+  Search,
+  Loader2,
+  ExternalLink,
   AlertTriangle,
   Info,
   HelpCircle
@@ -83,11 +83,11 @@ export function VariantLookup({ onLookup }: VariantLookupProps) {
         // Default API call
         const response = await fetch(`/api/clinvar?query=${encodeURIComponent(query)}`);
         const data = await response.json();
-        
+
         if (!response.ok) {
           throw new Error(data.error || "Failed to lookup variant");
         }
-        
+
         setResult(data);
       }
     } catch (err) {
@@ -106,17 +106,18 @@ export function VariantLookup({ onLookup }: VariantLookupProps) {
   return (
     <div className="space-y-6">
       {/* Search Input */}
-      <Card className="shadow-sm">
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <Search className="h-5 w-5" />
-            ClinVar Variant Lookup
+      <Card className="lab-glass border-primary/10 relative overflow-hidden shadow-xl">
+        <div className="absolute inset-0 tech-grid opacity-[0.03] pointer-events-none" />
+        <CardHeader className="relative z-10">
+          <CardTitle className="flex items-center gap-2 font-serif text-2xl">
+            <Search className="h-5 w-5 text-primary" />
+            Genomic Variant Lookup
           </CardTitle>
-          <CardDescription>
-            Look up a specific genetic variant by rsID, HGVS notation, or ClinVar Variation ID
+          <CardDescription className="font-mono text-[10px] uppercase tracking-widest text-primary/60 mt-1">
+            ClinVar_Realtime_Access_Engine
           </CardDescription>
         </CardHeader>
-        <CardContent className="space-y-4">
+        <CardContent className="space-y-6 relative z-10">
           <div className="flex gap-2">
             <Input
               placeholder="e.g., rs1234567, NM_000123.4:c.123A>G, or VCV000012345"
@@ -124,23 +125,35 @@ export function VariantLookup({ onLookup }: VariantLookupProps) {
               onChange={(e) => setQuery(e.target.value)}
               onKeyDown={handleKeyDown}
               disabled={isLoading}
-              className="font-mono"
+              className="font-mono h-12 border-primary/20 bg-white/50 focus:bg-white transition-all shadow-inner"
             />
-            <Button onClick={handleLookup} disabled={isLoading || !query.trim()}>
+            <Button onClick={handleLookup} disabled={isLoading || !query.trim()} className="h-12 w-16 shadow-md hover:shadow-lg transition-all active:scale-95">
               {isLoading ? (
-                <Loader2 className="h-4 w-4 animate-spin" />
+                <Loader2 className="h-5 w-5 animate-spin" />
               ) : (
-                <Search className="h-4 w-4" />
+                <Search className="h-5 w-5" />
               )}
             </Button>
           </div>
 
-          <div className="text-sm text-muted-foreground">
-            <p className="font-medium mb-1">Accepted formats:</p>
-            <ul className="list-disc list-inside space-y-1 text-xs">
-              <li><span className="font-mono">rs1234567</span> - dbSNP Reference ID</li>
-              <li><span className="font-mono">NM_000123.4:c.123A&gt;G</span> - HGVS notation</li>
-              <li><span className="font-mono">VCV000012345</span> or <span className="font-mono">12345</span> - ClinVar Variation ID</li>
+          <div className="bg-primary/5 rounded-[4px] border border-primary/10 p-4">
+            <h4 className="font-mono font-bold text-[10px] uppercase tracking-widest text-primary/60 mb-2 flex items-center gap-2">
+              <div className="w-1 h-3 bg-primary" />
+              Accepted_Identifier_Protocols
+            </h4>
+            <ul className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <li className="flex flex-col gap-1">
+                <span className="text-[10px] font-bold text-slate-500 uppercase">dbSNP Reference</span>
+                <span className="font-mono text-xs bg-white/80 p-1.5 rounded border border-indigo-50">rs1234567</span>
+              </li>
+              <li className="flex flex-col gap-1">
+                <span className="text-[10px] font-bold text-slate-500 uppercase">HGVS Standard</span>
+                <span className="font-mono text-xs bg-white/80 p-1.5 rounded border border-indigo-50">NM_000123.4:c.123A&gt;G</span>
+              </li>
+              <li className="flex flex-col gap-1">
+                <span className="text-[10px] font-bold text-slate-500 uppercase">ClinVar ID</span>
+                <span className="font-mono text-xs bg-white/80 p-1.5 rounded border border-indigo-50">VCV000012345</span>
+              </li>
             </ul>
           </div>
         </CardContent>
@@ -245,9 +258,9 @@ export function VariantLookup({ onLookup }: VariantLookupProps) {
           )}
 
           {/* Disclaimer */}
-          <Alert variant="info">
-            <Info className="h-4 w-4" />
-            <AlertDescription className="text-sm">
+          <Alert variant="scientific" className="border-primary/20 bg-primary/5">
+            <Info className="h-4 w-4 text-primary" />
+            <AlertDescription className="text-sm text-primary/80">
               {result.disclaimer}
             </AlertDescription>
           </Alert>

@@ -6,11 +6,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Button } from "@/components/ui/button";
-import { 
-  BookOpen, 
-  AlertTriangle, 
-  HelpCircle, 
-  Link as LinkIcon, 
+import {
+  BookOpen,
+  AlertTriangle,
+  HelpCircle,
+  Link as LinkIcon,
   Download,
   XCircle,
   CheckCircle2,
@@ -107,8 +107,8 @@ export function ResultTabs({ result }: ResultTabsProps) {
 
     const confidenceScore =
       classificationConfidence === "high" ? 1 :
-      classificationConfidence === "medium" ? 0.7 :
-      classificationConfidence === "low" ? 0.4 : 0.3;
+        classificationConfidence === "medium" ? 0.7 :
+          classificationConfidence === "low" ? 0.4 : 0.3;
 
     const hasGene = entities.some((e) => e.type === "gene");
     const hasVariantId = entities.some((e) => e.type === "rsid" || e.type === "hgvs");
@@ -130,8 +130,8 @@ export function ResultTabs({ result }: ResultTabsProps) {
 
     const actionClarityScore = clamp01(
       isVus ? 0.5 :
-      (isPathogenic || isBenign) ? 0.8 :
-      0.4
+        (isPathogenic || isBenign) ? 0.8 :
+          0.4
     );
 
     const likelyNeedsConfirmation =
@@ -197,23 +197,25 @@ export function ResultTabs({ result }: ResultTabsProps) {
   return (
     <div className="space-y-4">
       {/* Disclaimer Banner */}
-      <Alert variant="info">
+      <Alert variant="scientific" className="border-primary/20 bg-primary/5">
         <Info className="h-4 w-4" />
-        <AlertDescription>{result.disclaimer}</AlertDescription>
+        <AlertDescription className="text-primary/80">{result.disclaimer}</AlertDescription>
       </Alert>
 
       {/* Refusals (if any) */}
       {result.refusals.length > 0 && (
-        <Alert variant="warning">
-          <AlertTriangle className="h-4 w-4" />
+        <Alert variant="warning" className="border-amber-200 bg-amber-50/50">
+          <AlertTriangle className="h-4 w-4 text-amber-600" />
           <AlertDescription>
             <div className="space-y-2">
-              <p className="font-semibold">Some requests could not be fulfilled:</p>
+              <p className="font-bold text-amber-900 uppercase text-[10px] tracking-widest font-mono">SAFETY_OVERRIDE_REFUSALS:</p>
               {result.refusals.map((refusal, i) => (
-                <div key={i} className="pl-4 border-l-2 border-amber-400">
-                  <p><strong>Request:</strong> {refusal.user_intent}</p>
-                  <p><strong>Why:</strong> {refusal.refusal_text}</p>
-                  <p><strong>Alternative:</strong> {refusal.safe_alternative}</p>
+                <div key={i} className="pl-4 border-l-2 border-amber-300">
+                  <p className="text-sm font-medium text-amber-900"><strong>Intent:</strong> {refusal.user_intent}</p>
+                  <p className="text-xs text-amber-800 opacity-80 mt-1">{refusal.refusal_text}</p>
+                  <div className="mt-2 bg-white/50 p-2 rounded-[4px] border border-amber-200">
+                    <p className="text-xs text-amber-900"><strong>Actionable Alternative:</strong> {refusal.safe_alternative}</p>
+                  </div>
                 </div>
               ))}
             </div>
@@ -222,35 +224,45 @@ export function ResultTabs({ result }: ResultTabsProps) {
       )}
 
       <Tabs defaultValue="summary" className="w-full">
-        <TabsList className="grid w-full grid-cols-6">
-          <TabsTrigger value="summary">Summary</TabsTrigger>
-          <TabsTrigger value="glossary">Glossary</TabsTrigger>
-          <TabsTrigger value="cautions">Cautions</TabsTrigger>
-          <TabsTrigger value="next-steps">Next Steps</TabsTrigger>
-          <TabsTrigger value="evidence">Evidence</TabsTrigger>
-          <TabsTrigger value="sources">Sources</TabsTrigger>
+        <TabsList className="grid w-full grid-cols-2 md:grid-cols-6 h-auto bg-primary/5 p-1 rounded-lg border border-primary/10">
+          <TabsTrigger value="summary" className="py-2.5 text-xs font-bold uppercase tracking-tighter">Summary</TabsTrigger>
+          <TabsTrigger value="glossary" className="py-2.5 text-xs font-bold uppercase tracking-tighter">Glossary</TabsTrigger>
+          <TabsTrigger value="cautions" className="py-2.5 text-xs font-bold uppercase tracking-tighter">Cautions</TabsTrigger>
+          <TabsTrigger value="next-steps" className="py-2.5 text-xs font-bold uppercase tracking-tighter">Next_Steps</TabsTrigger>
+          <TabsTrigger value="evidence" className="py-2.5 text-xs font-bold uppercase tracking-tighter">Evidence</TabsTrigger>
+          <TabsTrigger value="sources" className="py-2.5 text-xs font-bold uppercase tracking-tighter">Sources</TabsTrigger>
         </TabsList>
 
         {/* Plain English Summary */}
-        <TabsContent value="summary">
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <BookOpen className="h-5 w-5" />
-                Plain English Summary
-              </CardTitle>
-              <CardDescription>
-                What your genetic report shows, explained simply
-              </CardDescription>
+        <TabsContent value="summary" className="mt-6">
+          <Card className="lab-glass border-primary/10 relative overflow-hidden">
+            <div className="absolute inset-0 tech-grid opacity-[0.03] pointer-events-none" />
+            <CardHeader className="relative z-10">
+              <div className="flex items-center justify-between">
+                <div>
+                  <CardTitle className="flex items-center gap-2 font-serif text-2xl">
+                    <BookOpen className="h-5 w-5 text-primary" />
+                    Translation Summary
+                  </CardTitle>
+                  <CardDescription className="font-mono text-[10px] uppercase tracking-widest mt-1 text-primary/60">
+                    Plain_English_Interpretation_Engine
+                  </CardDescription>
+                </div>
+                <div className="hidden sm:flex items-center gap-2 px-3 py-1 bg-primary/10 rounded-full border border-primary/20">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  <span className="text-[10px] font-bold font-mono text-primary uppercase">v.Analytic_FINAL</span>
+                </div>
+              </div>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-6 relative z-10">
               {/* Extracted Entities */}
               {result.extracted_entities.length > 0 && (
-                <div>
-                  <h4 className="font-semibold mb-2 text-sm text-muted-foreground">
-                    Identified Items:
+                <div className="bg-primary/5 rounded-[4px] border border-primary/10 p-4">
+                  <h4 className="font-mono font-bold text-[10px] uppercase tracking-widest text-primary/60 mb-3 flex items-center gap-2">
+                    <div className="w-1 h-3 bg-primary" />
+                    Identified_Genomic_Tokens
                   </h4>
-                  <div className="flex flex-wrap">
+                  <div className="flex flex-wrap gap-1">
                     {result.extracted_entities.map((entity, i) => (
                       <EntityBadge key={i} entity={entity} />
                     ))}
@@ -259,42 +271,54 @@ export function ResultTabs({ result }: ResultTabsProps) {
               )}
 
               {/* Summary Text */}
-              <div className="prose prose-sm dark:prose-invert max-w-none">
-                <p className="whitespace-pre-wrap">{result.summary_plain_english}</p>
+              <div className="prose prose-sm dark:prose-invert max-w-none group">
+                <div className="relative p-6 bg-white border border-indigo-50 shadow-sm rounded-[4px] transition-all hover:shadow-md">
+                  <div className="absolute top-0 left-0 w-1 h-full bg-primary/20 group-hover:bg-primary transition-colors" />
+                  <p className="whitespace-pre-wrap text-slate-700 leading-relaxed text-base font-medium leading-relaxed">
+                    {result.summary_plain_english}
+                  </p>
+                </div>
               </div>
             </CardContent>
           </Card>
         </TabsContent>
 
         {/* Glossary */}
-        <TabsContent value="glossary">
-          <Card>
+        <TabsContent value="glossary" className="mt-6">
+          <Card className="lab-glass border-primary/10">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <BookOpen className="h-5 w-5" />
-                Key Terms Explained
+              <CardTitle className="flex items-center gap-2 font-serif">
+                <BookOpen className="h-5 w-5 text-primary" />
+                Genomic Glossary
               </CardTitle>
-              <CardDescription>
-                Definitions of technical terms found in your report
+              <CardDescription className="font-mono text-[10px] uppercase tracking-widest text-primary/60">
+                Technical_Terminology_Reference
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-4">
+              <div className="space-y-6">
                 {result.glossary.map((entry, i) => (
-                  <div key={i} className="border-b pb-4 last:border-0">
-                    <h4 className="font-semibold text-lg">{entry.term}</h4>
-                    <p className="mt-1">{entry.meaning}</p>
-                    <p className="mt-2 text-sm text-muted-foreground">
-                      <strong>Why it matters:</strong> {entry.why_it_matters}
-                    </p>
+                  <div key={i} className="group relative p-4 bg-white border border-indigo-50 rounded-[4px] shadow-sm transition-all hover:shadow-md">
+                    <div className="absolute top-0 left-0 w-1 h-0 group-hover:h-full bg-primary transition-all duration-300" />
+                    <h4 className="font-bold text-lg text-slate-800">{entry.term}</h4>
+                    <p className="mt-2 text-slate-600 border-l-2 border-primary/10 pl-4">{entry.meaning}</p>
+                    <div className="mt-4 flex items-start gap-2 p-2 bg-primary/5 rounded-[4px] border border-primary/10">
+                      <Info className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                      <p className="text-xs text-primary/80">
+                        <strong className="font-mono uppercase tracking-tighter">Significance:</strong> {entry.why_it_matters}
+                      </p>
+                    </div>
                     {entry.common_misreadings && entry.common_misreadings.length > 0 && (
-                      <div className="mt-2">
-                        <p className="text-sm font-medium text-amber-600 dark:text-amber-400">
-                          Common misunderstandings:
+                      <div className="mt-3 pl-6 pr-4 py-2 border-l-2 border-amber-200 bg-amber-50/30 rounded-r-[4px]">
+                        <p className="text-[10px] font-bold font-mono text-amber-600 uppercase tracking-widest mb-1">
+                          Potential_Misinterpretation_Risks:
                         </p>
-                        <ul className="text-sm list-disc list-inside text-muted-foreground">
+                        <ul className="text-xs space-y-1 text-amber-800/80 italic">
                           {entry.common_misreadings.map((misreading, j) => (
-                            <li key={j}>{misreading}</li>
+                            <li key={j} className="flex gap-2">
+                              <span className="text-amber-400">•</span>
+                              {misreading}
+                            </li>
                           ))}
                         </ul>
                       </div>
@@ -302,7 +326,9 @@ export function ResultTabs({ result }: ResultTabsProps) {
                   </div>
                 ))}
                 {result.glossary.length === 0 && (
-                  <p className="text-muted-foreground">No specific terms to define.</p>
+                  <div className="text-center py-12 bg-primary/5 rounded-lg border border-dashed border-primary/20 text-muted-foreground font-mono text-sm">
+                    NO_GLOSSARY_ITEMS_IDENTIFIED
+                  </div>
                 )}
               </div>
             </CardContent>
@@ -310,52 +336,59 @@ export function ResultTabs({ result }: ResultTabsProps) {
         </TabsContent>
 
         {/* What This Does NOT Mean */}
-        <TabsContent value="cautions">
-          <Card>
+        <TabsContent value="cautions" className="mt-6">
+          <Card className="lab-glass border-amber-200/50 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 blur-[60px] pointer-events-none" />
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <XCircle className="h-5 w-5 text-amber-500" />
-                What This Does NOT Mean
+              <CardTitle className="flex items-center gap-2 font-serif">
+                <AlertTriangle className="h-5 w-5 text-amber-500" />
+                Risk Literacy & Cautions
               </CardTitle>
-              <CardDescription>
-                Common misinterpretations to avoid
+              <CardDescription className="font-mono text-[10px] uppercase tracking-widest text-amber-600/60">
+                Interpretive_Boundary_Awareness
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="space-y-3">
+              <div className="space-y-4">
                 {result.what_this_does_not_mean.map((item, i) => (
-                  <div key={i} className="flex items-start gap-3 p-3 bg-amber-50 dark:bg-amber-950 rounded-lg">
-                    <XCircle className="h-5 w-5 text-amber-500 flex-shrink-0 mt-0.5" />
-                    <p>{item}</p>
+                  <div key={i} className="flex items-start gap-4 p-4 bg-amber-50/50 border border-amber-100 rounded-[4px] group transition-all hover:bg-white hover:shadow-sm">
+                    <div className="h-6 w-6 rounded-full bg-amber-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                      <XCircle className="h-4 w-4 text-amber-600" />
+                    </div>
+                    <p className="text-amber-900 font-medium leading-relaxed">{item}</p>
                   </div>
                 ))}
                 {result.what_this_does_not_mean.length === 0 && (
-                  <p className="text-muted-foreground">No specific cautions to note.</p>
+                  <div className="text-center py-12 bg-amber-50/30 rounded-lg border border-dashed border-amber-200 text-amber-800/60 font-mono text-sm">
+                    NO_SPECIFIC_CAUTIONS_GENERATED
+                  </div>
                 )}
               </div>
             </CardContent>
           </Card>
 
           {/* Questions to Ask */}
-          <Card className="mt-4">
+          <Card className="mt-6 lab-glass border-primary/10">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <HelpCircle className="h-5 w-5" />
-                Questions for Your Healthcare Provider
+              <CardTitle className="flex items-center gap-2 font-serif text-xl">
+                <HelpCircle className="h-5 w-5 text-primary" />
+                Clinician Question Builder
               </CardTitle>
-              <CardDescription>
-                Suggested questions to discuss with a genetic counselor or doctor
+              <CardDescription className="font-mono text-[10px] uppercase tracking-widest text-primary/60">
+                Actionable_Health_Dialog_Support
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-2">
+              <div className="grid md:grid-cols-1 gap-3">
                 {result.questions_to_ask.map((question, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                    <span>{question}</span>
-                  </li>
+                  <div key={i} className="flex items-start gap-4 p-4 bg-white border border-indigo-50 rounded-[4px] shadow-sm hover:border-primary/20 transition-all">
+                    <div className="h-6 w-6 rounded bg-primary/10 flex items-center justify-center flex-shrink-0">
+                      <span className="text-[10px] font-mono font-bold text-primary">{String(i + 1).padStart(2, '0')}</span>
+                    </div>
+                    <span className="text-slate-700 font-medium leading-relaxed">{question}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
             </CardContent>
           </Card>
         </TabsContent>
@@ -502,9 +535,9 @@ export function ResultTabs({ result }: ResultTabsProps) {
                       <LinkIcon className="h-4 w-4 mt-1 flex-shrink-0" />
                       <div>
                         {source.url ? (
-                          <a 
-                            href={source.url} 
-                            target="_blank" 
+                          <a
+                            href={source.url}
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="font-medium text-primary hover:underline"
                           >
