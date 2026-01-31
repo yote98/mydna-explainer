@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { AlertTriangle, FileText, Loader2, Type, Upload, Shield, Eye, Filter, Dna } from "lucide-react";
+import { FileText, Loader2, Type, Upload, Shield, Eye, Filter, Dna } from "lucide-react";
 import { FileUpload } from "./FileUpload";
 
 // ============================================================================
