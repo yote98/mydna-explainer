@@ -278,8 +278,22 @@ export async function translateReport(
   
   // Build context from our knowledge base
   const glossaryContext = buildGlossaryContext([
-    'VUS', 'pathogenic', 'benign', 'heterozygous', 'homozygous', 
-    'penetrance', 'rsID', 'HGVS'
+    'VUS',
+    'Pathogenic',
+    'Likely Pathogenic',
+    'Benign',
+    'Likely Benign',
+    'Clinical Significance',
+    'Heterozygous',
+    'Homozygous',
+    'Penetrance',
+    'Polygenic',
+    'Monogenic',
+    'rsID',
+    'HGVS',
+    'Ancestry Bias',
+    'DTC',
+    'Genetic Counselor',
   ]);
   
   // Enhanced prompt with KB context

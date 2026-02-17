@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -152,6 +153,22 @@ export function ResultTabs({ result }: ResultTabsProps) {
     };
   }, [result.extracted_entities]);
 
+  const learnLinks = useMemo(() => {
+    const cls = evidence.classification.toLowerCase();
+    const isVus = /\bvus\b|uncertain/.test(cls);
+    const hasVariantId = result.extracted_entities.some((e) => e.type === "rsid" || e.type === "hgvs");
+    const showDtc =
+      /\b(23andme|ancestrydna|myheritage|circle\s*dna|dtc|direct-to-consumer)\b/i.test(result.summary_plain_english);
+
+    return [
+      { href: "/kb/explainers/clinvar-classifications", label: "ClinVar classifications" },
+      ...(isVus ? [{ href: "/kb/explainers/vus-explained", label: "What is a VUS?" }] : []),
+      ...(hasVariantId ? [{ href: "/lookup", label: "Variant lookup (ClinVar)" }] : []),
+      { href: "/kb/explainers/what-genetic-tests-cannot-tell-you", label: "What genetic tests cannot tell you" },
+      ...(showDtc ? [{ href: "/kb/explainers/dtc-testing-limitations", label: "DTC testing limitations" }] : []),
+    ];
+  }, [evidence.classification, result.extracted_entities, result.summary_plain_english]);
+
   const [literature, setLiterature] = useState<LiteratureResponse | null>(null);
   const [literatureLoading, setLiteratureLoading] = useState(false);
   const [literatureError, setLiteratureError] = useState<string | null>(null);
@@ -279,6 +296,50 @@ export function ResultTabs({ result }: ResultTabsProps) {
                   </p>
                 </div>
               </div>
+
+              {(result.glossary.length > 0 || learnLinks.length > 0) && (
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-primary/5 rounded-[4px] border border-primary/10 p-4">
+                    <h4 className="font-mono font-bold text-[10px] uppercase tracking-widest text-primary/60 mb-3 flex items-center gap-2">
+                      <div className="w-1 h-3 bg-primary" />
+                      Key_Terms_Quick_Definitions
+                    </h4>
+                    {result.glossary.length === 0 ? (
+                      <p className="text-sm text-muted-foreground">
+                        No key terms detected. Open the Glossary tab for general genetics terms.
+                      </p>
+                    ) : (
+                      <div className="space-y-3">
+                        {result.glossary.slice(0, 4).map((g) => (
+                          <div key={g.term} className="bg-white border border-indigo-50 rounded-[4px] p-3">
+                            <p className="font-medium text-sm text-slate-800">{g.term}</p>
+                            <p className="text-xs text-slate-600 mt-1 leading-relaxed">{g.meaning}</p>
+                          </div>
+                        ))}
+                        {result.glossary.length > 4 && (
+                          <p className="text-xs text-muted-foreground">
+                            More definitions available in the Glossary tab.
+                          </p>
+                        )}
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="bg-white border border-indigo-50 rounded-[4px] p-4 shadow-sm">
+                    <h4 className="font-mono font-bold text-[10px] uppercase tracking-widest text-primary/60 mb-3 flex items-center gap-2">
+                      <div className="w-1 h-3 bg-primary" />
+                      Learn_More
+                    </h4>
+                    <div className="space-y-2">
+                      {learnLinks.map((l) => (
+                        <Link key={l.href} href={l.href} className="block text-sm text-primary hover:underline">
+                          {l.label}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </CardContent>
           </Card>
         </TabsContent>
