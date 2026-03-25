@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertTriangle, XCircle, CheckCircle } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Disclaimer",
+  description:
+    "Educational scope and limitations of MyDNA Explainer: not medical advice, not diagnostic, and not a substitute for genetic counseling.",
+  robots: { index: true, follow: true },
+  openGraph: { title: "Disclaimer | MyDNA Explainer", url: "/disclaimer" },
+};
 
 export default function DisclaimerPage() {
   return (

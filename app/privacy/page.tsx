@@ -1,5 +1,13 @@
+import type { Metadata } from "next";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Lock, Eye, Trash2, Server } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Privacy policy",
+  description: "How MyDNA Explainer handles your data: session-based processing, no long-term storage of report content, and third-party APIs.",
+  robots: { index: true, follow: true },
+  openGraph: { title: "Privacy policy | MyDNA Explainer", url: "/privacy" },
+};
 
 export default function PrivacyPage() {
   return (

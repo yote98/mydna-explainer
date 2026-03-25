@@ -1,5 +1,6 @@
 import { readFile } from "fs/promises";
 import path from "path";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -25,6 +26,27 @@ function titleFromSlug(slug: string): string {
     .split("-")
     .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
     .join(" ");
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  if (!isSafeSlug(slug)) return { title: "Explainer" };
+  const md = await loadExplainerMarkdown(slug);
+  if (!md) return { title: "Explainer" };
+  const title = titleFromSlug(slug);
+  return {
+    title,
+    description: `Educational genetics explainer: ${title}. Informational only — not medical advice.`,
+    openGraph: {
+      title: `${title} | MyDNA Explainer`,
+      description: "Educational explainer from the MyDNA knowledge base.",
+      url: `/kb/explainers/${slug}`,
+    },
+  };
 }
 
 export default async function ExplainerPage({ params }: { params: Promise<{ slug: string }> }) {

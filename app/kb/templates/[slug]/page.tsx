@@ -1,5 +1,6 @@
 import { readFile } from "fs/promises";
 import path from "path";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
@@ -21,6 +22,34 @@ async function loadTemplateJson(slug: string): Promise<unknown> {
   } catch {
     return null;
   }
+}
+
+function titleFromSlug(slug: string): string {
+  return slug
+    .split("-")
+    .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  if (!isSafeSlug(slug)) return { title: "Template" };
+  const data = await loadTemplateJson(slug);
+  if (!data) return { title: "Template" };
+  const title = titleFromSlug(slug);
+  return {
+    title,
+    description: `Printable preparation resource: ${title}. Educational only — not medical advice.`,
+    openGraph: {
+      title: `${title} | MyDNA Explainer`,
+      description: "Checklist and worksheet from MyDNA Explainer.",
+      url: `/kb/templates/${slug}`,
+    },
+  };
 }
 
 function downloadDataUrl(filename: string, json: unknown): string {

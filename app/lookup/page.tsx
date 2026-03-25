@@ -1,7 +1,19 @@
+import type { Metadata } from "next";
 import { VariantLookup } from "@/components/VariantLookup";
 import { SafetyBanner } from "@/components/SafetyBanner";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Info, Database, ShieldAlert, CheckCircle2, HelpCircle, Activity } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Variant lookup",
+  description:
+    "Look up rsIDs and HGVS notations against ClinVar for educational context. Results are informational only — not medical advice.",
+  openGraph: {
+    title: "ClinVar variant lookup | MyDNA Explainer",
+    description: "Educational ClinVar-based variant lookup. Confirm all findings with a qualified professional.",
+    url: "/lookup",
+  },
+};
 
 export default function LookupPage() {
   return (
