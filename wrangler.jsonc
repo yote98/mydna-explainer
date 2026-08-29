@@ -6,6 +6,15 @@
     "nodejs_compat"
   ],
   "main": "vinext/server/fetch-handler",
+  // Preview environment (non-secret). Values mirror Vercel production behavior.
+  // Secrets (LLM_API_KEY, NCBI_API_KEY) are set via `wrangler secret put`, not here.
+  // NOTE: NEXT_PUBLIC_SITE_URL is the temporary workers.dev preview URL; switch to
+  // the production domain if/when this deployment path is promoted.
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://mydna-explainer.jelenasoon.workers.dev",
+    "PREBUILT_ONLY_MODE": "true",
+    "LLM_PROVIDER": "deepseek"
+  },
   "assets": {
     "directory": "dist/client",
     "not_found_handling": "none",
