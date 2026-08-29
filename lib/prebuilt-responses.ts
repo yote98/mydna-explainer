@@ -1,7 +1,6 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
 import { TranslateResponse } from './schema';
 import { getDisclaimer } from './kb';
+import { prebuiltBase, prebuiltExtended } from './kb-content';
 
 // Types for pre-built responses
 interface GeneResponse {
@@ -27,7 +26,7 @@ interface GeneData {
   responses: Record<string, GeneResponse>;
 }
 
-interface PrebuiltData {
+export interface PrebuiltData {
   genes: Record<string, GeneData>;
   common_classifications: Record<string, {
     standard_response: {
@@ -41,42 +40,25 @@ interface PrebuiltData {
 // Cache for loaded data
 let prebuiltCache: PrebuiltData | null = null;
 
-function safeReadJson<T>(filePath: string): T | null {
-  try {
-    const raw = readFileSync(filePath, 'utf-8');
-    return JSON.parse(raw) as T;
-  } catch {
-    return null;
-  }
-}
-
 function loadPrebuiltData(): PrebuiltData {
   if (prebuiltCache) return prebuiltCache;
-  
-  try {
-    const basePath = join(process.cwd(), 'kb', 'prebuilt', 'common-genes.json');
-    const base = safeReadJson<PrebuiltData>(basePath) || { genes: {}, common_classifications: {} };
 
-    // Optional extension file to keep the base file small and stable.
-    // Add more genes here without touching the original starter dataset.
-    const extendedPath = join(process.cwd(), 'kb', 'prebuilt', 'extended-genes.json');
-    const extended = safeReadJson<Partial<PrebuiltData>>(extendedPath);
+  const base = prebuiltBase;
+  // Optional extension file to keep the base file small and stable.
+  // Add more genes here without touching the original starter dataset.
+  const extended = prebuiltExtended;
 
-    prebuiltCache = {
-      genes: {
-        ...(base.genes || {}),
-        ...(extended?.genes || {}),
-      },
-      common_classifications: {
-        ...(base.common_classifications || {}),
-        ...(extended?.common_classifications || {}),
-      },
-    };
-    return prebuiltCache;
-  } catch (error) {
-    console.error('Failed to load prebuilt responses:', error);
-    return { genes: {}, common_classifications: {} };
-  }
+  prebuiltCache = {
+    genes: {
+      ...(base.genes || {}),
+      ...(extended?.genes || {}),
+    },
+    common_classifications: {
+      ...(base.common_classifications || {}),
+      ...(extended?.common_classifications || {}),
+    },
+  };
+  return prebuiltCache;
 }
 
 function escapeRegexLiteral(input: string): string {

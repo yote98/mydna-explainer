@@ -1,5 +1,8 @@
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import {
+  glossary as glossaryContent,
+  nextStepsTemplate,
+  questionsTemplate,
+} from './kb-content';
 
 // Types for the knowledge base
 export interface GlossaryTerm {
@@ -59,23 +62,11 @@ let glossaryCache: GlossaryData | null = null;
 let questionsCache: QuestionsTemplate | null = null;
 let nextStepsCache: NextStepsTemplate | null = null;
 
-// Get the base path for the kb directory
-function getKbPath(): string {
-  return join(process.cwd(), 'kb');
-}
-
-// Load and cache the glossary
+// Load and cache the glossary (bundled at build time via lib/kb-content)
 export function getGlossary(): GlossaryData {
   if (glossaryCache) return glossaryCache;
-  
-  try {
-    const data = readFileSync(join(getKbPath(), 'glossary.json'), 'utf-8');
-    glossaryCache = JSON.parse(data) as GlossaryData;
-    return glossaryCache;
-  } catch (error) {
-    console.error('Failed to load glossary:', error);
-    return { terms: [] };
-  }
+  glossaryCache = glossaryContent;
+  return glossaryCache;
 }
 
 // Get a specific term from the glossary
@@ -104,35 +95,15 @@ export function getMatchingTerms(keywords: string[]): GlossaryTerm[] {
 // Load questions template
 export function getQuestionsTemplate(): QuestionsTemplate {
   if (questionsCache) return questionsCache;
-  
-  try {
-    const data = readFileSync(join(getKbPath(), 'templates', 'questions-for-clinician.json'), 'utf-8');
-    questionsCache = JSON.parse(data) as QuestionsTemplate;
-    return questionsCache;
-  } catch (error) {
-    console.error('Failed to load questions template:', error);
-    return {
-      general_questions: [],
-      for_vus_results: [],
-      for_pathogenic_results: [],
-      for_carrier_status: [],
-      about_the_test: []
-    };
-  }
+  questionsCache = questionsTemplate;
+  return questionsCache;
 }
 
 // Load next steps template
 export function getNextStepsTemplate(): NextStepsTemplate {
   if (nextStepsCache) return nextStepsCache;
-  
-  try {
-    const data = readFileSync(join(getKbPath(), 'templates', 'next-steps-checklist.json'), 'utf-8');
-    nextStepsCache = JSON.parse(data) as NextStepsTemplate;
-    return nextStepsCache;
-  } catch (error) {
-    console.error('Failed to load next steps template:', error);
-    throw new Error('Failed to load next steps template');
-  }
+  nextStepsCache = nextStepsTemplate;
+  return nextStepsCache;
 }
 
 // Get questions relevant to specific result types
