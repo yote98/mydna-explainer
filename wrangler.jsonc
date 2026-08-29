@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "mydna-explainer",
+  "compatibility_date": "2026-08-29",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "main": "vinext/server/fetch-handler",
+  // Production custom domains (zone ai-education.net on this account).
+  // Secrets (LLM_API_KEY, NCBI_API_KEY) are set via `wrangler secret put`, not here.
+  "vars": {
+    "NEXT_PUBLIC_SITE_URL": "https://www.ai-education.net",
+    "PREBUILT_ONLY_MODE": "true",
+    "LLM_PROVIDER": "deepseek"
+  },
+  "routes": [
+    { "pattern": "ai-education.net", "custom_domain": true },
+    { "pattern": "www.ai-education.net", "custom_domain": true }
+  ],
+  "assets": {
+    "directory": "dist/client",
+    "not_found_handling": "none",
+    "binding": "ASSETS"
+  },
+  "cache": {
+    "enabled": true
+  }
+}

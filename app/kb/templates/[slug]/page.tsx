@@ -1,11 +1,10 @@
-import { readFile } from "fs/promises";
-import path from "path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { templates } from "@/lib/kb-content";
 
 export const runtime = "nodejs";
 
@@ -15,13 +14,8 @@ function isSafeSlug(slug: string): boolean {
 
 async function loadTemplateJson(slug: string): Promise<unknown> {
   if (!isSafeSlug(slug)) return null;
-  const filePath = path.join(process.cwd(), "kb", "templates", `${slug}.json`);
-  try {
-    const raw = await readFile(filePath, "utf-8");
-    return JSON.parse(raw) as unknown;
-  } catch {
-    return null;
-  }
+  // Content is bundled at build time (see lib/kb-content.ts); no runtime fs.
+  return templates[slug] ?? null;
 }
 
 function titleFromSlug(slug: string): string {

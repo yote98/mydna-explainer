@@ -1,9 +1,8 @@
-import { readFile } from "fs/promises";
-import path from "path";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { explainers } from "@/lib/kb-content";
 
 export const runtime = "nodejs";
 
@@ -13,12 +12,8 @@ function isSafeSlug(slug: string): boolean {
 
 async function loadExplainerMarkdown(slug: string): Promise<string | null> {
   if (!isSafeSlug(slug)) return null;
-  const filePath = path.join(process.cwd(), "kb", "explainers", `${slug}.md`);
-  try {
-    return await readFile(filePath, "utf-8");
-  } catch {
-    return null;
-  }
+  // Content is bundled at build time (see lib/kb-content.ts); no runtime fs.
+  return explainers[slug] ?? null;
 }
 
 function titleFromSlug(slug: string): string {
